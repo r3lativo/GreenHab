@@ -19,21 +19,36 @@ struct ProfiloView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Image("profilePic")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 250.0, height: 250.0)
-                    .mask(Circle())
-                    .overlay(Circle().stroke(Color.black, lineWidth: 4))
-                    .shadow(radius: 10)
-                ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
-                    .scaleEffect(2, anchor: .center)
-                    .padding(.horizontal, 120.0)
-                    .padding(.vertical)
-                Text("NomeUtente")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                Spacer()
+                ForEach(utente) { utente in
+                    Image(utente.immagineUtente)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 250.0, height: 250.0)
+                        .mask(Circle())
+                        .overlay(Circle().stroke(Color.black, lineWidth: 4))
+                        .shadow(radius: 10)
+                        .padding()
+                    Text(utente.nomeUtente)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
+                        .scaleEffect(2, anchor: .center)
+                        .padding(.horizontal, 120.0)
+                    Text("lvl \(utente.lvlUtente)")
+                    
+                    Spacer()
+                    List {
+                        Section(header: Text ("Progressi")) {
+                            ForEach(progresso) { progresso in
+                                HStack {
+                                    Image(progresso.immagineProgresso)
+                                    Text(progresso.campoProgresso)
+                                    Text("\(progresso.numeroProgresso)")
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .navigationTitle("Profilo")
         }
