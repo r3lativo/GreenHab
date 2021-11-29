@@ -19,6 +19,7 @@ struct MainView: View {
                     Image(systemName: "square.grid.2x2")
                     Text("Scopri")
                 }
+          
             
             SfideView()
                 .badge(2)
