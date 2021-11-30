@@ -12,33 +12,11 @@ import SwiftUI
 
 
 
-struct ScopriView: View {
+struct VicinoATeView: View {
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    Section(header: Text("Articoli")) {
-                        ScrollView(.horizontal) {
-                            HStack(spacing: 20) {
-                                ForEach(articolo) { articolo in
-                                    ZStack{
-                                        VStack {
-                                            Image(articolo.immagineArticolo)
-                                                .resizable()
-                                                .scaledToFit()
-                                                .cornerRadius(10)
-                                            Text("\(articolo.nomeArticolo)")
-                                                .font(.headline)
-                                            Text("\(articolo.descrizioneArticolo)")
-                                        }
-                                    }
-                                }
-                                .frame(width: 300.0, height: 250.0)
-                            }
-                        }
-                    }
-                    .headerProminence(.increased)
-                    
                     Section(header: Text("Curiosità")) {
                         ScrollView(.horizontal) {
                             HStack(spacing: 20) {
@@ -59,15 +37,15 @@ struct ScopriView: View {
                     
                 }
             }
-            .navigationTitle("Scopri")
+            .navigationTitle("Vicino a te")
             .symbolVariant(/*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
             // DA CERCARE
         }
     }
 }
 
-struct ScopriView_Previews: PreviewProvider {
+struct VicinoATeView_Previews: PreviewProvider {
     static var previews: some View {
-        ScopriView()
+        VicinoATeView()
     }
 }

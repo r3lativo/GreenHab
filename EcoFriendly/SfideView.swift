@@ -15,32 +15,24 @@ struct SfideView: View {
         NavigationView {
             VStack {
                 List {
-                    Section(header: Text("in corso")) {
-                        ForEach(sfida) { sfida in
-                            HStack {
-                                Image(sfida.iconaSfida)
-                                    .padding(.horizontal, 10.0)
-                                Text(sfida.nomeSfida)
-                            }
-                            .frame(height: 50.0)
-                            .swipeActions(edge: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/, allowsFullSwipe: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/) {
-                                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
-                                    Label("Fatto", systemImage: "checkmark.circle")
+                    ForEach(sfida) { sfida in
+                        HStack {
+                            Image(sfida.iconaSfida)
+                                .padding(.horizontal, 10.0)
+                            Text(sfida.nomeSfida)
+                                .frame(height: 50.0)
+                                .swipeActions(edge: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/, allowsFullSwipe: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/) {
+                                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
+                                        Label("Fatto", systemImage: "checkmark.circle")
+                                    }
+                                    .tint(.mint)
                                 }
-                                .tint(.mint)
-                            }
                         }
                     }
                 }
-                
-                List {
-                    Section(header: Text("completate")) {
-                        
-                    }
-                }
             }
+            .navigationTitle("Sfide")
         }
-        .navigationTitle("Sfide")
     }
 }
 

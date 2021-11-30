@@ -14,17 +14,17 @@ struct MainView: View {
     var body: some View {
         TabView() {
             
-            ScopriView()
-                .tabItem {
-                    Image(systemName: "square.grid.2x2")
-                    Text("Scopri")
-                }
-            
             SfideView()
                 .badge(2)
                 .tabItem {
                     Image(systemName: "leaf.arrow.triangle.circlepath")
                     Text("Sfide")
+                }
+            
+            VicinoATeView()
+                .tabItem {
+                    Image(systemName: "mappin.and.ellipse")
+                    Text("Vicino a te")
                 }
             
             ProfiloView()
@@ -33,6 +33,7 @@ struct MainView: View {
                     Text("Profilo")
                 }
         }
+        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.626, green: 0.934, blue: 0.782)/*@END_MENU_TOKEN@*/)
     }
 }
 
