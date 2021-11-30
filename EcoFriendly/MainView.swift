@@ -14,7 +14,7 @@ struct MainView: View {
     var body: some View {
         TabView() {
             
-            ScopriView()
+            VicinoATeView()
                 .tabItem {
                     Image(systemName: "square.grid.2x2")
                     Text("Scopri")
