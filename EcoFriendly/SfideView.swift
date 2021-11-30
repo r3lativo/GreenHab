@@ -13,24 +13,20 @@ import SwiftUI
 struct SfideView: View {
     var body: some View {
         NavigationView {
-            ZStack {
-                Color("colore.celeste")
-                VStack {
-                    List {
-                        ForEach(sfida) { sfida in
-                            HStack {
-                                Image(sfida.iconaSfida)
-                                    .padding(.horizontal, 10.0)
-                                Text(sfida.nomeSfida)
-                                    .frame(height: 50.0)
-                            }
+            VStack {
+                List {
+                    ForEach(sfida) { sfida in
+                        HStack {
+                            Image(sfida.iconaSfida)
+                                .padding(.horizontal, 10.0)
+                            Text(sfida.nomeSfida)
+                                .frame(height: 50.0)
                         }
                     }
                 }
-                .navigationTitle("Sfide")
             }
+            .navigationTitle("Sfide")
         }
-        
     }
 }
 

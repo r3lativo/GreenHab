@@ -16,8 +16,7 @@ struct VicinoATeView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color("colore.celeste")
-                
+                Color.coloreCeleste                
                 
             }
             .navigationTitle("Vicino a te")

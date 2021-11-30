@@ -10,37 +10,39 @@ import SwiftUI
 //  Main TabView with buttons to move through the app
 
 extension Color {
-     static let coloreVerde = Color("coloreVerde")
-     static let coloreCeleste = Color("coloreCeleste")
+    static let coloreVerde = Color("coloreVerde")
+    static let coloreCeleste = Color("coloreCeleste")
 }
 
 struct MainMainView: View {
     
-    //    RIATTIVARE QUESTA STRINGA E DISATTIVARE LA @State SOTTO ALLA FINE
-    //    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
+    //  RIATTIVARE QUESTA STRINGA @AppStorage
+    //  E DISATTIVARE LA @State SOTTO PER FAR PARTIRE LA APP
+    //  @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
     @State var shouldShowOnboarding: Bool = true
     
     var body: some View {
-        NavigationView {
-            TabView() {
-                SfideView()
-                    .badge(2)
-                    .tabItem {
-                        Image(systemName: "leaf.arrow.triangle.circlepath")
-                        Text("Sfide")
-                    }
-                VicinoATeView()
-                    .tabItem {
-                        Image(systemName: "mappin.and.ellipse")
-                        Text("Vicino a te")
-                    }
-                ProfiloView()
-                    .tabItem {
-                        Image(systemName: "person.fill")
-                        Text("Profilo")
-                    }
-            }
+        TabView() {
+            
+            SfideView()
+                .badge(2)
+                .tabItem {
+                    Image(systemName: "leaf.arrow.triangle.circlepath")
+                    Text("Sfide")
+                }
+            
+            VicinoATeView()
+                .tabItem {
+                    Image(systemName: "mappin.and.ellipse")
+                    Text("Vicino a te")
+                }
+            
+            ProfiloView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Profilo")
+                }
         }
         .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
             OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
@@ -123,6 +125,7 @@ struct PageView: View {
     let promptAvatar: Bool
     let promptUserName: Bool
     let showStart: Bool
+    
     @Binding var shouldShowOnboarding: Bool
     
     
@@ -163,11 +166,9 @@ struct PageView: View {
             }
             
             if promptAvatar {
-                Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
-                    /*@START_MENU_TOKEN@*/Text("1").tag(1)/*@END_MENU_TOKEN@*/
-                    /*@START_MENU_TOKEN@*/Text("2").tag(2)/*@END_MENU_TOKEN@*/
-                }
+                Text("Avatar")
             }
+            
             
         }
     }
