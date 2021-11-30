@@ -14,6 +14,13 @@ struct MainView: View {
     var body: some View {
         TabView() {
             
+            ScopriView()
+                .tabItem {
+                    Image(systemName: "square.grid.2x2")
+                    Text("Scopri")
+                }
+          
+            
             SfideView()
                 .badge(2)
                 .tabItem {
