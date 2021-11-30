@@ -14,6 +14,7 @@ struct MainView: View {
     var body: some View {
         TabView() {
             
+            
             SfideView()
                 .badge(2)
                 .tabItem {
@@ -33,7 +34,6 @@ struct MainView: View {
                     Text("Profilo")
                 }
         }
-        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.626, green: 0.934, blue: 0.782)/*@END_MENU_TOKEN@*/)
     }
 }
 

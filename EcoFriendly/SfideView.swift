@@ -13,26 +13,24 @@ import SwiftUI
 struct SfideView: View {
     var body: some View {
         NavigationView {
-            VStack {
-                List {
-                    ForEach(sfida) { sfida in
-                        HStack {
-                            Image(sfida.iconaSfida)
-                                .padding(.horizontal, 10.0)
-                            Text(sfida.nomeSfida)
-                                .frame(height: 50.0)
-                                .swipeActions(edge: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/, allowsFullSwipe: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/) {
-                                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/){
-                                        Label("Fatto", systemImage: "checkmark.circle")
-                                    }
-                                    .tint(.mint)
-                                }
+            ZStack {
+                Color("colore.celeste")
+                VStack {
+                    List {
+                        ForEach(sfida) { sfida in
+                            HStack {
+                                Image(sfida.iconaSfida)
+                                    .padding(.horizontal, 10.0)
+                                Text(sfida.nomeSfida)
+                                    .frame(height: 50.0)
+                            }
                         }
                     }
                 }
+                .navigationTitle("Sfide")
             }
-            .navigationTitle("Sfide")
         }
+        
     }
 }
 

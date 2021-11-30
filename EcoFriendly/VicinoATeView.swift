@@ -15,27 +15,10 @@ import SwiftUI
 struct VicinoATeView: View {
     var body: some View {
         NavigationView {
-            VStack {
-                List {
-                    Section(header: Text("Curiosità")) {
-                        ScrollView(.horizontal) {
-                            HStack(spacing: 20) {
-                                ForEach (fattoDivertente) { fattoDivertente in
-                                    VStack {
-                                        Image(fattoDivertente.immagineFF)
-                                            .resizable()
-                                            .cornerRadius(10)
-                                    }
-                                    
-                                }
-                                .frame(width: 180.0, height: 180.0)
-                                .clipped(antialiased: false)
-                            }
-                        }
-                    }
-                    .headerProminence(.increased)
-                    
-                }
+            ZStack {
+                Color("colore.celeste")
+                
+                
             }
             .navigationTitle("Vicino a te")
             .symbolVariant(/*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
