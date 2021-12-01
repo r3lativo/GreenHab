@@ -14,9 +14,3 @@ struct CalendarioView: View {
         }
     }
 }
-
-struct CalendarioView_Previews: PreviewProvider {
-    static var previews: some View {
-        CalendarioView()
-    }
-}

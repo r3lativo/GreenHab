@@ -15,8 +15,3 @@ struct RifiutiSpecialiView: View {
     }
 }
 
-struct RifiutiSpecialiView_Previews: PreviewProvider {
-    static var previews: some View {
-        RifiutiSpecialiView()
-    }
-}

@@ -12,7 +12,7 @@ import SwiftUI
 
 
 
-struct VicinoATeView: View {
+struct Oggi: View {
     var body: some View {
         NavigationView {
             VStack {
@@ -62,8 +62,8 @@ struct VicinoATeView: View {
 
 
 
-struct VicinoATeView_Previews: PreviewProvider {
+struct Oggi_Previews: PreviewProvider {
     static var previews: some View {
-        VicinoATeView()
+        Oggi()
     }
 }

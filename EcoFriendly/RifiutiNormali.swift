@@ -14,9 +14,3 @@ struct RifiutiNormaliView: View {
         }
     }
 }
-
-struct RifiutiNormaliView_Previews: PreviewProvider {
-    static var previews: some View {
-        RifiutiNormaliView()
-    }
-}

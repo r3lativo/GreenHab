@@ -34,7 +34,7 @@ struct MainMainView: View {
                     Text("Sfide")
                 }
             
-            VicinoATeView()
+            Oggi()
                 .tabItem {
                     Image(systemName: "mappin.and.ellipse")
                     Text("Vicino a te")
