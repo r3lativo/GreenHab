@@ -17,10 +17,21 @@ struct SfideView: View {
                 List {
                     ForEach(sfida) { sfida in
                         HStack {
-                            Image(sfida.iconaSfida)
-                                .padding(.horizontal, 10.0)
-                            Text(sfida.nomeSfida)
-                                .frame(height: 50.0)
+                            VStack {
+                                Text(sfida.nomeSfida)
+                                    .font(.system(size:42))
+                                    .padding(.bottom, 60.0)
+                                    .frame(height: 50.0)
+                            }
+                            Spacer()
+                            
+                            VStack {
+                                Image(sfida.iconaSfida)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                    .padding(.trailing)
+                            }
                         }
                     }
                 }

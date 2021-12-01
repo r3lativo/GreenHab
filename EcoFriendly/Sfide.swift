@@ -19,8 +19,8 @@ struct Sfida: Identifiable {
 }
 
 var sfida: [Sfida] = [
-    Sfida(nomeSfida: "Solo buste di tela", iconaSfida: "bag", expSfida: 10, sfidaCompletata: false),
+    Sfida(nomeSfida: "Spesa Green", iconaSfida: "carrelloBlu", expSfida: 10, sfidaCompletata: false),
     
-    Sfida(nomeSfida: "Mottainai", iconaSfida: "dial.min.fill", expSfida: 20, sfidaCompletata: true)
+    Sfida(nomeSfida: "Valigia eco", iconaSfida: "dial.min.fill", expSfida: 20, sfidaCompletata: true)
 
 ]

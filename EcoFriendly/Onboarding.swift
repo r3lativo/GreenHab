@@ -24,6 +24,7 @@ struct OnboardingView: View {
                     imageName: "planet",
                     description: "l'app che ti aiuta ad essere più eco-friendly",
                     showStart: false,
+                    showPromptUsername: false,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
                 
@@ -32,6 +33,7 @@ struct OnboardingView: View {
                     imageName: "mountain",
                     description: "Sperimenta nuove abitudini ecosostenibili e inizia la tua scalata dei livelli.",
                     showStart: false,
+                    showPromptUsername: false,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
                 
@@ -40,16 +42,16 @@ struct OnboardingView: View {
                     imageName: "recycle.bin",
                     description: "Non sai cosa si butta oggi nel tuo comune? Nella sezione Vicino a te avrai tutte le informazioni che ti servono",
                     showStart: false,
+                    showPromptUsername: false,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
-                
-                ChooseAnimalView(shouldShowOnboarding: $shouldShowOnboarding, userName: "Scrivi qui il tuo nome utente")
-                
+                                
                 PageView(
                     title: "Comincia l'avventura!",
                     imageName: "macchinaElettrica",
                     description: "dai",
                     showStart: true,
+                    showPromptUsername: true,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
                 
@@ -66,6 +68,7 @@ struct PageView: View {
     let imageName: String
     let description: String
     let showStart: Bool
+    let showPromptUsername: Bool
     
     @Binding var shouldShowOnboarding: Bool
     
