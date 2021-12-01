@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2544D68427568E4700D06750 /* MainMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2544D68327568E4700D06750 /* MainMainView.swift */; };
-		256D7D1D2756E7CC009CB95E /* OnboardingTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D7D1C2756E7CC009CB95E /* OnboardingTestView.swift */; };
 		257DA54F2750F6820008B8BE /* EcoFriendlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DA54E2750F6820008B8BE /* EcoFriendlyApp.swift */; };
 		257DA5532750F6820008B8BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257DA5522750F6820008B8BE /* Assets.xcassets */; };
 		257DA5562750F6820008B8BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257DA5552750F6820008B8BE /* Preview Assets.xcassets */; };
@@ -17,11 +16,11 @@
 		257DA5652750F7360008B8BE /* ProfiloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DA5642750F7360008B8BE /* ProfiloView.swift */; };
 		257DA56B275121F30008B8BE /* Sfide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DA56A275121F30008B8BE /* Sfide.swift */; };
 		257DA56D275121FE0008B8BE /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DA56C275121FE0008B8BE /* Utente.swift */; };
+		257F76202756F6270065A040 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F761F2756F6270065A040 /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2544D68327568E4700D06750 /* MainMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMainView.swift; sourceTree = "<group>"; };
-		256D7D1C2756E7CC009CB95E /* OnboardingTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTestView.swift; sourceTree = "<group>"; };
 		257DA54B2750F6820008B8BE /* EcoFriendly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoFriendly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		257DA54E2750F6820008B8BE /* EcoFriendlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoFriendlyApp.swift; sourceTree = "<group>"; };
 		257DA5522750F6820008B8BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 		257DA5642750F7360008B8BE /* ProfiloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfiloView.swift; sourceTree = "<group>"; };
 		257DA56A275121F30008B8BE /* Sfide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sfide.swift; sourceTree = "<group>"; };
 		257DA56C275121FE0008B8BE /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
+		257F761F2756F6270065A040 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 			children = (
 				257DA54E2750F6820008B8BE /* EcoFriendlyApp.swift */,
 				2544D68327568E4700D06750 /* MainMainView.swift */,
-				256D7D1C2756E7CC009CB95E /* OnboardingTestView.swift */,
+				257F761F2756F6270065A040 /* Onboarding.swift */,
 				257DA5622750F7290008B8BE /* SfideView.swift */,
 				257DA55E2750F7130008B8BE /* VicinoATeView.swift */,
 				257DA56A275121F30008B8BE /* Sfide.swift */,
@@ -156,12 +156,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				257DA5652750F7360008B8BE /* ProfiloView.swift in Sources */,
-				256D7D1D2756E7CC009CB95E /* OnboardingTestView.swift in Sources */,
 				257DA56B275121F30008B8BE /* Sfide.swift in Sources */,
 				257DA5632750F7290008B8BE /* SfideView.swift in Sources */,
 				257DA55F2750F7130008B8BE /* VicinoATeView.swift in Sources */,
 				2544D68427568E4700D06750 /* MainMainView.swift in Sources */,
 				257DA56D275121FE0008B8BE /* Utente.swift in Sources */,
+				257F76202756F6270065A040 /* Onboarding.swift in Sources */,
 				257DA54F2750F6820008B8BE /* EcoFriendlyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
