@@ -14,6 +14,7 @@ import SwiftUI
 struct OnboardingView: View {
     @Binding var shouldShowOnboarding: Bool
     
+    
     var body: some View {
         ZStack {
             Color.coloreCeleste.ignoresSafeArea()
@@ -22,8 +23,6 @@ struct OnboardingView: View {
                     title: "Benvenuto in GreenHab",
                     imageName: "planet",
                     description: "l'app che ti aiuta ad essere più eco-friendly",
-                    promptAvatar: false,
-                    promptUserName: false,
                     showStart: false,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
@@ -32,8 +31,6 @@ struct OnboardingView: View {
                     title: "Lanciati in tante nuove sfide",
                     imageName: "mountain",
                     description: "Sperimenta nuove abitudini ecosostenibili e inizia la tua scalata dei livelli.",
-                    promptAvatar: false,
-                    promptUserName: false,
                     showStart: false,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
@@ -42,28 +39,16 @@ struct OnboardingView: View {
                     title: "Informati sul riciclaggio nella tua zona",
                     imageName: "recycle.bin",
                     description: "Non sai cosa si butta oggi nel tuo comune? Nella sezione Vicino a te avrai tutte le informazioni che ti servono",
-                    promptAvatar: false,
-                    promptUserName: false,
                     showStart: false,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
                 
-                PageView(
-                    title: "Scegli il tuo animale guida",
-                    imageName: "",
-                    description: "",
-                    promptAvatar: true,
-                    promptUserName: false,
-                    showStart: false,
-                    shouldShowOnboarding: $shouldShowOnboarding
-                )
+                ChooseAnimalView(shouldShowOnboarding: $shouldShowOnboarding, userName: "Scrivi qui il tuo nome utente")
                 
                 PageView(
                     title: "Comincia l'avventura!",
                     imageName: "macchinaElettrica",
                     description: "dai",
-                    promptAvatar: false,
-                    promptUserName: false,
                     showStart: true,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
@@ -80,8 +65,6 @@ struct PageView: View {
     let title: String
     let imageName: String
     let description: String
-    let promptAvatar: Bool
-    let promptUserName: Bool
     let showStart: Bool
     
     @Binding var shouldShowOnboarding: Bool
@@ -122,12 +105,7 @@ struct PageView: View {
                         .shadow(radius: 6)
                 })
             }
-            
-            if promptAvatar {
-                Text("Avatar")
-            }
-            
-            
         }
     }
 }
+

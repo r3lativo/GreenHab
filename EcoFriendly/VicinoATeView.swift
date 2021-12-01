@@ -15,9 +15,8 @@ import SwiftUI
 struct VicinoATeView: View {
     var body: some View {
         NavigationView {
-            ZStack {
-                Color.coloreCeleste                
-                
+            VStack {
+                Text("Ciao")
             }
             .navigationTitle("Vicino a te")
             .symbolVariant(/*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)

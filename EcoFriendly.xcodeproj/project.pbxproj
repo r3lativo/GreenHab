@@ -17,6 +17,8 @@
 		257DA56B275121F30008B8BE /* Sfide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DA56A275121F30008B8BE /* Sfide.swift */; };
 		257DA56D275121FE0008B8BE /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DA56C275121FE0008B8BE /* Utente.swift */; };
 		257F76202756F6270065A040 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F761F2756F6270065A040 /* Onboarding.swift */; };
+		2594AC9E275768B000A90DA4 /* ImmaginiUtente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2594AC9D275768B000A90DA4 /* ImmaginiUtente.swift */; };
+		2594ACA027576AC800A90DA4 /* ChooseAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2594AC9F27576AC800A90DA4 /* ChooseAnimal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		257DA56A275121F30008B8BE /* Sfide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sfide.swift; sourceTree = "<group>"; };
 		257DA56C275121FE0008B8BE /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
 		257F761F2756F6270065A040 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		2594AC9D275768B000A90DA4 /* ImmaginiUtente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmaginiUtente.swift; sourceTree = "<group>"; };
+		2594AC9F27576AC800A90DA4 /* ChooseAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAnimal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				257DA54E2750F6820008B8BE /* EcoFriendlyApp.swift */,
 				2544D68327568E4700D06750 /* MainMainView.swift */,
 				257F761F2756F6270065A040 /* Onboarding.swift */,
+				2594AC9F27576AC800A90DA4 /* ChooseAnimal.swift */,
+				2594AC9D275768B000A90DA4 /* ImmaginiUtente.swift */,
 				257DA5622750F7290008B8BE /* SfideView.swift */,
 				257DA55E2750F7130008B8BE /* VicinoATeView.swift */,
 				257DA56A275121F30008B8BE /* Sfide.swift */,
@@ -158,8 +164,10 @@
 				257DA5652750F7360008B8BE /* ProfiloView.swift in Sources */,
 				257DA56B275121F30008B8BE /* Sfide.swift in Sources */,
 				257DA5632750F7290008B8BE /* SfideView.swift in Sources */,
+				2594ACA027576AC800A90DA4 /* ChooseAnimal.swift in Sources */,
 				257DA55F2750F7130008B8BE /* VicinoATeView.swift in Sources */,
 				2544D68427568E4700D06750 /* MainMainView.swift in Sources */,
+				2594AC9E275768B000A90DA4 /* ImmaginiUtente.swift in Sources */,
 				257DA56D275121FE0008B8BE /* Utente.swift in Sources */,
 				257F76202756F6270065A040 /* Onboarding.swift in Sources */,
 				257DA54F2750F6820008B8BE /* EcoFriendlyApp.swift in Sources */,

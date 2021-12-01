@@ -17,7 +17,7 @@ extension Color {
 struct MainMainView: View {
     
     //  RIATTIVARE LA STRINGA @AppStorage
-    //  E DISATTIVARE LA @State PER FAR PARTIRE LA APP
+    //  E DISATTIVARE LA @State PER FAR APPARIRE L'ONBOARDING
     
 //    @State var shouldShowOnboarding: Bool = true
     
