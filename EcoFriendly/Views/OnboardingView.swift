@@ -38,7 +38,7 @@ struct OnboardingView: View {
                 )
                 
                 PageView(
-                    title: "Informati sul riciclaggio nella tua zona",
+                    title: "Informati sul riciclaggio",
                     imageName: "recycle.bin",
                     description: "Non sai cosa si butta oggi nel tuo comune? Nella sezione Vicino a te avrai tutte le informazioni che ti servono",
                     showStart: false,
@@ -47,9 +47,9 @@ struct OnboardingView: View {
                 )
                 
                 PageView(
-                    title: "Comincia l'avventura!",
-                    imageName: "macchinaElettrica",
-                    description: "dai",
+                    title: "Scegli il tuo username",
+                    imageName: "polarBear",
+                    description: "Comincia l'avventura!",
                     showStart: true,
                     showPromptUsername: true,
                     shouldShowOnboarding: $shouldShowOnboarding
@@ -77,15 +77,28 @@ struct PageView: View {
     var body: some View {
         VStack {
             Text (title)
-                .font(.system(size:42))
+                .font(.system(size:38))
                 .multilineTextAlignment(.center)
                 .padding()
             
             Image(imageName)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 400, height: 400)
+                .frame(width: 350, height: 350)
                 .padding()
+            
+            if showPromptUsername {
+                TextField("Nome", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 150)
+                    .padding()
+                    .background(Color.yellow)
+                
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 40)
+                            .stroke(Color.blue, lineWidth: 3)
+                    )
+            }
             
             
             Text (description)

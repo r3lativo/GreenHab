@@ -23,7 +23,7 @@ struct MainMainView: View {
     
 //    CERCARE USERDEFAULT
     
-      @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
+@AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
     
     var body: some View {

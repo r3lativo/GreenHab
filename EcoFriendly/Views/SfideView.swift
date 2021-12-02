@@ -12,20 +12,33 @@ import SwiftUI
 struct SfideView: View {
     var body: some View {
         NavigationView {
-            VStack {
-                List {
-                    Section(header: Text("in corso")) {
-                        ScrollView {
-                            
-                                    }
+            ScrollView {
+                VStack {
+                    List {
+                        Section(header: Text ("Seleziona sfida")) {
+                            HStack {
+                                VStack {
+                                    Text("Sfida 1")
+                                        .font(.system(size:26))
+                                        .padding(.bottom, 60.0)
+                                }
+                                Spacer()
+                                
+                                VStack {
+                                    Image("polarBear")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 100, height: 100)
+                                        .padding(.trailing)
                                 }
                             }
                         }
-            .navigationTitle("Sfide")
                     }
                 }
             }
-
+        }
+    }
+}
 
 
 struct SfideView_Previews: PreviewProvider {

@@ -16,7 +16,7 @@ struct OggiView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("si butta la carta")
+                Text("Oggi si butta la carta!")
                     .font(.system(size:28))
                     .multilineTextAlignment(.center)
                     .padding()
@@ -24,19 +24,13 @@ struct OggiView: View {
                 Image("paperBin")
                     .resizable()
                     .frame(width: 300, height: 300)
-                    .shadow(radius: 10)
                     .padding()
                 
                 List {
-                    NavigationLink(destination: CalendarioView())
-                    {
-                        Text("Calendario Settimanale")
-                            .frame(height: 40)
-                    }
                     
-                    NavigationLink(destination: RifiutiNormaliView())
+                    NavigationLink(destination: DoveSiButtaView())
                     {
-                        Text("Rifiuti Normali")
+                        Text("Dove si butta?")
                             .frame(height: 40)
                     }
                     
@@ -46,9 +40,8 @@ struct OggiView: View {
                         Text("Rifiuti Speciali")
                             .frame(height: 40)
                     }
-                    
-                    
                 }
+                .padding(.top, 100.0)
                 
                 
             }
