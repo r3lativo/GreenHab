@@ -12,11 +12,11 @@ import SwiftUI
 
 
 
-struct Oggi: View {
+struct OggiView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Carta")
+                Text("si butta la carta")
                     .font(.system(size:28))
                     .multilineTextAlignment(.center)
                     .padding()
@@ -62,8 +62,8 @@ struct Oggi: View {
 
 
 
-struct Oggi_Previews: PreviewProvider {
+struct OggiView_Previews: PreviewProvider {
     static var previews: some View {
-        Oggi()
+        OggiView()
     }
 }

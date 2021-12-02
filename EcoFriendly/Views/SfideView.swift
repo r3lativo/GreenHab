@@ -21,6 +21,7 @@ struct SfideView: View {
                                 }
                             }
                         }
+            .navigationTitle("Sfide")
                     }
                 }
             }

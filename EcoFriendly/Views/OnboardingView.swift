@@ -1,5 +1,5 @@
 //
-//  Onboarding.swift
+//  OnboardingView.swift
 //  EcoFriendly
 //
 //  Created by Giovanni Duca on 01/12/21.
@@ -45,7 +45,7 @@ struct OnboardingView: View {
                     showPromptUsername: false,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
-                                
+                
                 PageView(
                     title: "Comincia l'avventura!",
                     imageName: "macchinaElettrica",
@@ -112,3 +112,9 @@ struct PageView: View {
     }
 }
 
+
+struct OnboardingView_Previews: PreviewProvider {
+    static var previews: some View {
+        OnboardingView(shouldShowOnboarding: .constant(true))
+    }
+}

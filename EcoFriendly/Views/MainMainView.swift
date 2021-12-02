@@ -21,6 +21,8 @@ struct MainMainView: View {
     
 //    @State var shouldShowOnboarding: Bool = true
     
+//    CERCARE USERDEFAULT
+    
       @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
     
@@ -30,21 +32,18 @@ struct MainMainView: View {
             SfideView()
                 .badge(2)
                 .tabItem {
-                    Image(systemName: "leaf.arrow.triangle.circlepath")
-                    Text("Sfide")
-                }
+                    Label("Sfide", systemImage: "leaf.arrow.triangle.circlepath")
+                }.tag(1)
             
-            Oggi()
+            OggiView()
                 .tabItem {
-                    Image(systemName: "mappin.and.ellipse")
-                    Text("Vicino a te")
-                }
+                    Label("Oggi", systemImage: "calendar")
+                }.tag(2)
             
             ProfiloView()
                 .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Profilo")
-                }
+                    Label("Profilo", systemImage: "person")
+                }.tag(3)
         }
         .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
             OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
