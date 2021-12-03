@@ -19,41 +19,23 @@ struct ClasseRifiuti: Identifiable {
 private let tipoRifiuti: [ClasseRifiuti]  = [
     
     ClasseRifiuti(nomeTipo: "Carta",
-                  rifiuti: [Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>)
+                  rifiuti: [Rifiuto(nomeRifiuto: "1"),
                            ]),
     
     ClasseRifiuti(nomeTipo: "Plastica/Metalli",
-                  rifiuti: [Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>)
+                  rifiuti: [Rifiuto(nomeRifiuto: "2"),
                            ]),
     
     ClasseRifiuti(nomeTipo: "Vetro",
-                  rifiuti: [Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>)
+                  rifiuti: [Rifiuto(nomeRifiuto: "3"),
                            ]),
     
     ClasseRifiuti(nomeTipo: "Umido",
-                  rifiuti: [Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>)
+                  rifiuti: [Rifiuto(nomeRifiuto: "4"),
                            ]),
     
     ClasseRifiuti(nomeTipo: "Indifferenziata",
-                  rifiuti: [Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>),
-                            Rifiuto(nomeRifiuto: <#T##String#>)
+                  rifiuti: [Rifiuto(nomeRifiuto: "5"),
                            ]),
     
     
