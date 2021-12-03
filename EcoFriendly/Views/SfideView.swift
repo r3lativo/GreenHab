@@ -28,6 +28,7 @@ struct SfideView: View {
                                         .foregroundColor(Color.primary)
                                         .fontWeight(.medium)
                                         .padding(.leading)
+                                        .multilineTextAlignment(.leading)
                                 
                                 Spacer()
                                 
