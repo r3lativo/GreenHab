@@ -35,11 +35,7 @@ struct OggiView: View {
                     }
                     
                     
-                    NavigationLink(destination: RifiutiSpecialiView())
-                    {
-                        Text("Rifiuti Speciali")
-                            .frame(height: 40)
-                    }
+                
                 }
                 .padding(.top, 50.0)
                 

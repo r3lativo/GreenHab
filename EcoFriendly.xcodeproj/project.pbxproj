@@ -20,7 +20,6 @@
 		257F76202756F6270065A040 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F761F2756F6270065A040 /* OnboardingView.swift */; };
 		2594AC9E275768B000A90DA4 /* ImmaginiUtente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2594AC9D275768B000A90DA4 /* ImmaginiUtente.swift */; };
 		2594ACA027576AC800A90DA4 /* ChooseAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2594AC9F27576AC800A90DA4 /* ChooseAnimal.swift */; };
-		25DEF8BE275797B1005768A8 /* RifiutiSpecialiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DEF8BD275797B1005768A8 /* RifiutiSpecialiView.swift */; };
 		25DEF8C02757B1EE005768A8 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DEF8BF2757B1EE005768A8 /* Tasks.swift */; };
 		25FED58C275A1BDA002A4680 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FED58B275A1BDA002A4680 /* TasksView.swift */; };
 /* End PBXBuildFile section */
@@ -40,7 +39,6 @@
 		257F761F2756F6270065A040 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		2594AC9D275768B000A90DA4 /* ImmaginiUtente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmaginiUtente.swift; sourceTree = "<group>"; };
 		2594AC9F27576AC800A90DA4 /* ChooseAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAnimal.swift; sourceTree = "<group>"; };
-		25DEF8BD275797B1005768A8 /* RifiutiSpecialiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RifiutiSpecialiView.swift; sourceTree = "<group>"; };
 		25DEF8BF2757B1EE005768A8 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		25FED58B275A1BDA002A4680 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +63,6 @@
 				25FED58B275A1BDA002A4680 /* TasksView.swift */,
 				257DA55E2750F7130008B8BE /* OggiView.swift */,
 				2508A7E92759218300C7340D /* DoveSiButtaView.swift */,
-				25DEF8BD275797B1005768A8 /* RifiutiSpecialiView.swift */,
 				257DA5642750F7360008B8BE /* ProfiloView.swift */,
 			);
 			path = Views;
@@ -190,7 +187,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				257DA5652750F7360008B8BE /* ProfiloView.swift in Sources */,
-				25DEF8BE275797B1005768A8 /* RifiutiSpecialiView.swift in Sources */,
 				257DA56B275121F30008B8BE /* Sfide.swift in Sources */,
 				25FED58C275A1BDA002A4680 /* TasksView.swift in Sources */,
 				257DA5632750F7290008B8BE /* SfideView.swift in Sources */,
