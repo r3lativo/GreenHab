@@ -35,9 +35,10 @@ struct ProfiloView: View {
                 
                 
                 
-                
+                Spacer()
                 
             }
+       
             .navigationTitle("Profilo")
         
             .navigationBarItems(trailing:
@@ -45,7 +46,9 @@ struct ProfiloView: View {
                 showModal.toggle()
             }) {
                 Text("Modifica")
+                   
             })
+            
             .sheet(isPresented: $showModal) {
                 ModificaView(showModal: $showModal)
             }
