@@ -9,34 +9,42 @@ import SwiftUI
 
 //  Qui ci sono le sfide. Andranno divise in "in corso" e "completate"
 
+
+
+
 struct SfideView: View {
     var body: some View {
         NavigationView {
-            VStack {
-                List {
-                    ForEach(sfida) { sfida in
-                        HStack {
-                            VStack {
-                                Text(sfida.nomeSfida)
-                                    .font(.system(size:26))
-                                    .fontWeight(.semibold)
-                                    .padding(.bottom, 80.0)
-                            }
-                            Spacer()
+            ScrollView {
+                ForEach(sfida) { sfida in
+                    NavigationLink(destination: TasksView()) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundColor(Color.coloreVerde)
                             
-                            VStack {
-                                Image(sfida.iconaSfida)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .padding(.trailing)
-                                    .padding(.top, 30.0)
+                            HStack {
+                                VStack {
+                                    Text(sfida.nomeSfida)
+                                        .font(.system(size:26))
+                                        .fontWeight(.semibold)
+                                        .padding(.bottom, 60.0)
+                                        .padding(.leading)
+                                }
+                                Spacer()
+                                
+                                VStack {
+                                    Image(sfida.iconaSfida)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 100, height: 100)
+                                        .padding(.trailing)
+                                        .padding(.top, 30.0)
+                                }
                             }
                         }
                     }
-                        .frame(width: 350, height: 150)
-                        
                 }
+                .padding(.horizontal)
             }
         }
     }
