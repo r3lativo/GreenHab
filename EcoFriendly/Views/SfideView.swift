@@ -23,29 +23,27 @@ struct SfideView: View {
                                 .foregroundColor(Color.coloreVerde)
                             
                             HStack {
-                                VStack {
-                                    Text(sfida.nomeSfida)
-                                        .font(.system(size:26))
-                                        .fontWeight(.semibold)
-                                        .padding(.bottom, 60.0)
+                                Text(sfida.nomeSfida)
+                                        .font(.system(size: 26))
+                                        .foregroundColor(Color.primary)
+                                        .fontWeight(.medium)
                                         .padding(.leading)
-                                }
+                                
                                 Spacer()
                                 
-                                VStack {
-                                    Image(sfida.iconaSfida)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 100, height: 100)
-                                        .padding(.trailing)
-                                        .padding(.top, 30.0)
-                                }
+                                Image(sfida.iconaSfida)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                    .padding()
                             }
                         }
                     }
                 }
                 .padding(.horizontal)
             }
+            .navigationTitle("Sfide")
+
         }
     }
 }
@@ -56,3 +54,31 @@ struct SfideView_Previews: PreviewProvider {
         SfideView()
     }
 }
+
+
+/*
+ ZStack {
+     RoundedRectangle(cornerRadius: 20)
+         .foregroundColor(Color.coloreVerde)
+     
+     HStack {
+         VStack {
+             Text(sfida.nomeSfida)
+                 .font(.system(size:26))
+                 .fontWeight(.semibold)
+                 .padding(.bottom, 60.0)
+                 .padding(.leading)
+         }
+         Spacer()
+         
+         VStack {
+             Image(sfida.iconaSfida)
+                 .resizable()
+                 .scaledToFit()
+                 .frame(width: 100, height: 100)
+                 .padding(.trailing)
+                 .padding(.top, 30.0)
+         }
+     }
+ }
+ */
