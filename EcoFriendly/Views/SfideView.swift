@@ -17,18 +17,18 @@ struct SfideView: View {
         NavigationView {
             ScrollView {
                 ForEach(sfida) { sfida in
-                    NavigationLink(destination: TasksView()) {
+                    NavigationLink(destination: CoseDaFareView()) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 20)
                                 .foregroundColor(Color.coloreVerde)
                             
                             HStack {
                                 Text(sfida.nomeSfida)
-                                        .font(.system(size: 26))
-                                        .foregroundColor(Color.primary)
-                                        .fontWeight(.medium)
-                                        .padding(.leading)
-                                        .multilineTextAlignment(.leading)
+                                    .font(.system(size: 26))
+                                    .foregroundColor(Color.primary)
+                                    .fontWeight(.medium)
+                                    .padding(.leading)
+                                    .multilineTextAlignment(.leading)
                                 
                                 Spacer()
                                 
@@ -38,13 +38,15 @@ struct SfideView: View {
                                     .frame(width: 100, height: 100)
                                     .padding()
                             }
+                            
                         }
+                        .padding(.top, 5.0)
                     }
                 }
-                .padding(.horizontal)
+                .padding()
             }
             .navigationTitle("Sfide")
-
+            
         }
     }
 }

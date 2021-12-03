@@ -19,9 +19,9 @@ struct MainMainView: View {
     //  RIATTIVARE LA STRINGA @AppStorage
     //  E DISATTIVARE LA @State PER FAR APPARIRE L'ONBOARDING
     
-//    @State var shouldShowOnboarding: Bool = true
+    //    @State var shouldShowOnboarding: Bool = true
     
-//    CERCARE USERDEFAULT
+    //    CERCARE USERDEFAULT
     
 @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
@@ -30,7 +30,6 @@ struct MainMainView: View {
         TabView() {
             
             SfideView()
-                .badge(2)
                 .tabItem {
                     Label("Sfide", systemImage: "leaf.arrow.triangle.circlepath")
                 }.tag(1)

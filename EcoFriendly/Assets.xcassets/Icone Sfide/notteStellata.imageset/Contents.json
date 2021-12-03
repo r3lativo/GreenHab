@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "notteStellata.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "notteStellata.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
