@@ -12,28 +12,30 @@ import SwiftUI
 struct SfideView: View {
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack {
-                    List {
-                        Section(header: Text ("Seleziona sfida")) {
-                            HStack {
-                                VStack {
-                                    Text("Sfida 1")
-                                        .font(.system(size:26))
-                                        .padding(.bottom, 60.0)
-                                }
-                                Spacer()
-                                
-                                VStack {
-                                    Image("polarBear")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 100, height: 100)
-                                        .padding(.trailing)
-                                }
+            VStack {
+                List {
+                    ForEach(sfida) { sfida in
+                        HStack {
+                            VStack {
+                                Text(sfida.nomeSfida)
+                                    .font(.system(size:26))
+                                    .fontWeight(.semibold)
+                                    .padding(.bottom, 80.0)
+                            }
+                            Spacer()
+                            
+                            VStack {
+                                Image(sfida.iconaSfida)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                    .padding(.trailing)
+                                    .padding(.top, 30.0)
                             }
                         }
                     }
+                        .frame(width: 350, height: 150)
+                        
                 }
             }
         }
@@ -46,28 +48,3 @@ struct SfideView_Previews: PreviewProvider {
         SfideView()
     }
 }
-
-/*
- VStack {
- List {
- ForEach(sfida) { sfida in
- HStack {
- VStack {
- Text(sfida.nomeSfida)
- .font(.system(size:26))
- .padding(.bottom, 60.0)
- }
- Spacer()
- 
- VStack {
- Image(sfida.iconaSfida)
- .resizable()
- .scaledToFit()
- .frame(width: 100, height: 100)
- .padding(.trailing)
- }
- }
- }
- }
- }
- */

@@ -114,7 +114,7 @@ struct PageView: View {
                     Text("Inizia")
                         .bold()
                         .font(.system(size: 20))
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .frame(width: 150, height: 50)
                         .background(Color.coloreVerde)
                         .cornerRadius(6)

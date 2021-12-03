@@ -54,9 +54,3 @@ struct ProfiloView: View {
         }
     }
 }
-
-struct ProfiloView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfiloView()
-    }
-}

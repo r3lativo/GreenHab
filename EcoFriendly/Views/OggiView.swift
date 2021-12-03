@@ -41,7 +41,7 @@ struct OggiView: View {
                             .frame(height: 40)
                     }
                 }
-                .padding(.top, 100.0)
+                .padding(.top, 50.0)
                 
                 
             }
@@ -54,9 +54,3 @@ struct OggiView: View {
 
 
 
-
-struct OggiView_Previews: PreviewProvider {
-    static var previews: some View {
-        OggiView()
-    }
-}

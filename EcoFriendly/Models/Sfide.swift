@@ -14,13 +14,13 @@ struct Sfida: Identifiable {
     let id = UUID()
     let nomeSfida: String
     let iconaSfida: String
-    let expSfida: Int
     let sfidaCompletata: Bool
 }
 
 var sfida: [Sfida] = [
-    Sfida(nomeSfida: "Spesa Green", iconaSfida: "carrelloBlu", expSfida: 10, sfidaCompletata: false),
+    Sfida(nomeSfida: "Spesa Green", iconaSfida: "carrelloBlu", sfidaCompletata: false),
     
-    Sfida(nomeSfida: "Valigia eco", iconaSfida: "dial.min.fill", expSfida: 20, sfidaCompletata: true)
+    Sfida(nomeSfida: "Valigia Eco", iconaSfida: "valigia", sfidaCompletata: false),
 
+    Sfida(nomeSfida: "Verde Natale", iconaSfida: "palleDiNatale", sfidaCompletata: false)
 ]
