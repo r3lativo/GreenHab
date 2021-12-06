@@ -14,6 +14,7 @@ struct ModificaView: View {
 
     
     var body: some View {
+        NavigationView {
         VStack(spacing: 50){
             
             HStack {
@@ -27,7 +28,6 @@ struct ModificaView: View {
            
             HStack(spacing:30) {
                 Button(action:  {immagineUtente = "salamander"
-                    showModal.toggle()
                 } ) {
                     Image("salamander")
                         .resizable()
@@ -35,7 +35,6 @@ struct ModificaView: View {
                         .frame(width: 100, height: 100)
                 }
                 Button(action: {immagineUtente = "fish"
-                    showModal.toggle()
                 }) {
                     Image("fish")
                         .resizable()
@@ -43,7 +42,6 @@ struct ModificaView: View {
                         .frame(width: 100, height: 100)
                 }
                 Button(action: {immagineUtente = "jaguar"
-                    showModal.toggle()
                 }) {
                     Image("jaguar")
                         .resizable()
@@ -54,7 +52,6 @@ struct ModificaView: View {
          }
             HStack(spacing:30){
                 Button(action: {immagineUtente = "fox"
-                    showModal.toggle()
                    
                 }) {
                     Image("fox")
@@ -64,7 +61,6 @@ struct ModificaView: View {
                 }
                 
                 Button(action: {immagineUtente = "seal"
-                    showModal.toggle()
              
                 }) {
                     Image("seal")
@@ -73,7 +69,6 @@ struct ModificaView: View {
                         .frame(width: 100, height: 100)
                 }
                 Button(action: {immagineUtente = "penguin"
-                    showModal.toggle()
                 }) {
                     Image("penguin")
                         .resizable()
@@ -85,7 +80,6 @@ struct ModificaView: View {
             }
             HStack(spacing:30){
                 Button(action: {immagineUtente = "polarBear"
-                    showModal.toggle()
                 }) {
                     Image("polarBear")
                         .resizable()
@@ -93,7 +87,6 @@ struct ModificaView: View {
                         .frame(width: 100, height: 100)
                 }
                 Button(action: {immagineUtente = "turtle"
-                    showModal.toggle()
                 }) {
                     Image("turtle")
                         .resizable()
@@ -101,7 +94,6 @@ struct ModificaView: View {
                         .frame(width: 100, height: 100)
                 }
                 Button(action: {immagineUtente = "ganesha"
-                    showModal.toggle()
                 }) {
                     Image("ganesha")
                         .resizable()
@@ -112,9 +104,17 @@ struct ModificaView: View {
                 
             }
             
+          
             
-            
-            
+            .navigationBarItems(trailing:
+                                    Button(action: {
+                showModal.toggle()
+            }) {
+                Text("Fatto")
+            }
+            )
+        }
+        .navigationTitle("Modifica Profilo")
         }
     }
 }

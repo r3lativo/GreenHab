@@ -8,23 +8,35 @@
 import SwiftUI
 
 struct CoseDaFareView: View {
+    
+    let challenge: Sfida
+    let changeStatus: (UUID) -> Void
+    
     var body: some View {
         VStack {
-            Text("Spiegazione da prendere in qualche modo")
+            
+            Text(challenge.spiegazione)
                 .foregroundColor(Color.secondary)
+                .padding()
             
             List {
-                HStack {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        Image("frutta")
-                            .resizable()
-                            .frame(width: 70, height: 70)
+                ForEach(challenge.componenti) { task in
+                    HStack {
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                            Image(task.immagineCosa)
+                                .resizable()
+                                .frame(width: 70, height: 70)
+                        }
+                        .disabled(!challenge.sfidaInCorso)
+                        Text(task.descrizioneCosa)
+                            .padding()
                     }
-                    Text("Lol")
-                        .padding()
                 }
             }
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+            Button(action: {
+                changeStatus(challenge.id)
+                
+            }) {
                 Text("Accetta la sfida!")
                     .fontWeight(.medium)
                     .font(.system(size: 20))
@@ -36,11 +48,7 @@ struct CoseDaFareView: View {
                 
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-struct CoseDaFare_Previews: PreviewProvider {
-    static var previews: some View {
-        CoseDaFareView()
-    }
-}

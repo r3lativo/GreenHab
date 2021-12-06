@@ -11,7 +11,6 @@ import SwiftUI
 struct EcoFriendlyApp: App {
     var body: some Scene {
         WindowGroup {
-            
             MainMainView()
         }
     }

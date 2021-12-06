@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-//  Qui ci sono gli articoli e le curiosità.
-//  è ancora in fase di progettazione.
-
-
-
 struct OggiView: View {
     var body: some View {
         NavigationView {
@@ -34,8 +29,13 @@ struct OggiView: View {
                             .frame(height: 40)
                     }
                     
-                    
-                    
+                    NavigationLink(destination: RifiutiSpecialiView())
+                    {
+                        Text("Rifiuti Speciali")
+                            .frame(height: 40)
+                    }
+                    .disabled(true)
+
                 }
                 .padding(.top, 50.0)
                 

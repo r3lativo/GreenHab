@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-
 //  Onboarding
 
 struct OnboardingView: View {
