@@ -28,7 +28,7 @@ struct ProfiloView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 280, height: 280)
-                Text("MarcoVerde")
+                Text(UserDefaults.standard.string(forKey: "nomeUtente") ?? "")
                     .font(.title)
                     .fontWeight(.regular)
                 Text("Progressi")

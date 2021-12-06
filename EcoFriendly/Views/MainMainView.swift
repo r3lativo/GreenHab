@@ -44,6 +44,7 @@ struct MainMainView: View {
                     Label("Profilo", systemImage: "person")
                 }.tag(3)
         }
+        .accentColor(Color.teal)
         .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
             OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
         })

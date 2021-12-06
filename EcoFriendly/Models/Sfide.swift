@@ -50,3 +50,5 @@ var sfida: [Sfida] = [
         spiegazione: "Ecco alcune cose che puoi fare a fine giornata per gravare meno sull’ambiente"
     )
 ]
+
+

@@ -10,14 +10,20 @@ import SwiftUI
 struct ModificaView: View {
     @Binding var showModal: Bool
     @Binding var immagineUtente: String
+    @AppStorage("nomeUtente") var nomeUtente: String = ""
+
     
     var body: some View {
-        
-        
-        
         VStack(spacing: 50){
             
-            Text("Username")
+            HStack {
+                Text("Username")
+                    .padding()
+                TextField("Cambia il tuo username", text: $nomeUtente)
+            }
+            .background(Color.white)
+            .padding()
+            .cornerRadius(20)
            
             HStack(spacing:30) {
                 Button(action:  {immagineUtente = "salamander"

@@ -12,9 +12,9 @@ import SwiftUI
 //  Onboarding
 
 struct OnboardingView: View {
+    
     @Binding var shouldShowOnboarding: Bool
-    
-    
+        
     var body: some View {
         ZStack {
             Color.coloreCeleste.ignoresSafeArea()
@@ -71,8 +71,7 @@ struct PageView: View {
     let showPromptUsername: Bool
     
     @Binding var shouldShowOnboarding: Bool
-    
-    
+    @State var nomeUtente: String = ""
     
     var body: some View {
         VStack {
@@ -91,7 +90,7 @@ struct PageView: View {
                 HStack {
                     Text("Username")
                         .padding()
-                    TextField("Nome", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    TextField("Nome", text: $nomeUtente)
                 }
                 .background(Color.white)
                 .padding()
@@ -107,6 +106,7 @@ struct PageView: View {
             
             if showStart {
                 Button(action: {
+                    UserDefaults.standard.set(nomeUtente, forKey: "Nome Utente")
                     shouldShowOnboarding.toggle()
                 }, label: {
                     Text("Inizia")
