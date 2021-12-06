@@ -17,6 +17,8 @@ struct ModificaView: View {
         
         VStack(spacing: 50){
             
+            Text("Username")
+           
             HStack(spacing:30) {
                 Button(action:  {immagineUtente = "salamander"
                     showModal.toggle()
@@ -92,7 +94,7 @@ struct ModificaView: View {
                         .scaledToFit()
                         .frame(width: 100, height: 100)
                 }
-                Button(action: {immagineUtente = "salamander"
+                Button(action: {immagineUtente = "ganesha"
                     showModal.toggle()
                 }) {
                     Image("ganesha")
