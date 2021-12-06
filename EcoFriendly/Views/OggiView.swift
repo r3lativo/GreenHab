@@ -35,7 +35,7 @@ struct OggiView: View {
                     }
                     
                     
-                
+                    
                 }
                 .padding(.top, 50.0)
                 
@@ -48,5 +48,10 @@ struct OggiView: View {
     }
 }
 
+struct Oggi_Previews: PreviewProvider {
+    static var previews: some View {
+        OggiView()
+    }
+}
 
 

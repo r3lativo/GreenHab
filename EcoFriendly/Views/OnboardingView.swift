@@ -49,7 +49,7 @@ struct OnboardingView: View {
                 PageView(
                     title: "Scegli il tuo username",
                     imageName: "polarBear",
-                    description: "Comincia l'avventura!",
+                    description: "",
                     showStart: true,
                     showPromptUsername: true,
                     shouldShowOnboarding: $shouldShowOnboarding
@@ -88,16 +88,14 @@ struct PageView: View {
                 .padding()
             
             if showPromptUsername {
-                TextField("Nome", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                    .multilineTextAlignment(.center)
-                    .frame(width: 150)
-                    .padding()
-                    .background(Color.yellow)
-                
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 40)
-                            .stroke(Color.blue, lineWidth: 3)
-                    )
+                HStack {
+                    Text("Username")
+                        .padding()
+                    TextField("Nome", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                }
+                .background(Color.white)
+                .padding()
+                .cornerRadius(20)
             }
             
             
@@ -118,7 +116,7 @@ struct PageView: View {
                         .frame(width: 150, height: 50)
                         .background(Color.coloreVerde)
                         .cornerRadius(6)
-                        .shadow(radius: 6)
+                        .shadow(radius: 5)
                 })
             }
         }

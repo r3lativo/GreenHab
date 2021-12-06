@@ -10,6 +10,8 @@ import SwiftUI
 
 //  Qui aggiungiamo le sfide
 
+
+
 struct Sfida: Identifiable {
     let id = UUID()
     let nomeSfida: String
@@ -33,7 +35,7 @@ var sfida: [Sfida] = [
         sfidaCompletata: false,
         spiegazione: "Stai per partire? Segui questi consigli sul cosa portare per essere più eco-friendly!"
     ),
-
+    
     Sfida(
         nomeSfida: "Verde Natale",
         iconaSfida: "palleDiNatale",

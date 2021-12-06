@@ -16,7 +16,8 @@ struct ClasseRifiuti: Identifiable {
     let rifiuti: [Rifiuto]
     let id = UUID()
 }
-private let tipoRifiuti: [ClasseRifiuti]  = [
+
+let tipoRifiuti: [ClasseRifiuti]  = [
     
     ClasseRifiuti(nomeTipo: "Carta",
                   rifiuti: [Rifiuto(nomeRifiuto: "Carta regalo"),
