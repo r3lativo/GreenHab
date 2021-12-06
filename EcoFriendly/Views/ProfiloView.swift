@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ProfiloView: View {
     @State private var showModal: Bool = false
-    
+    @State var nomeUtente = UserDefaults.standard.string(forKey: "nomeUtente") ?? ""
     @State var immagineUtente = "polarBear"
     
     var body: some View {
@@ -74,6 +74,9 @@ struct ProfiloView: View {
             
             .sheet(isPresented: $showModal) {
                 ModificaView(showModal: $showModal, immagineUtente: $immagineUtente)
+            }
+            .onAppear {
+                nomeUtente = UserDefaults.standard.string(forKey: "nomeUtente") ?? ""
             }
             
         }

@@ -10,7 +10,7 @@ import SwiftUI
 struct CoseDaFareView: View {
     
     let challenge: Sfida
-    
+    let changeStatus: (UUID) -> Void
     
     var body: some View {
         VStack {
@@ -31,13 +31,11 @@ struct CoseDaFareView: View {
                         Text(task.descrizioneCosa)
                             .padding()
                     }
-                    
                 }
             }
             Button(action: {
-                if let id = sfida.firstIndex(where: {$0.id == challenge.id}) {
-                    sfida[id].sfidaInCorso = true
-                }
+                changeStatus(challenge.id)
+                
             }) {
                 Text("Accetta la sfida!")
                     .fontWeight(.medium)
