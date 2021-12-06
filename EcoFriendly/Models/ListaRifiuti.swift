@@ -11,6 +11,7 @@ struct Rifiuto: Hashable, Identifiable {
     let nomeRifiuto: String
     let id = UUID()
 }
+
 struct ClasseRifiuti: Identifiable {
     let nomeTipo: String
     let rifiuti: [Rifiuto]
