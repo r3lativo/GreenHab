@@ -20,11 +20,14 @@ struct ModificaView: View {
             HStack {
                 Text("Username")
                     .padding()
+                    .foregroundColor(Color.secondary)
                 TextField("Cambia il tuo username", text: $nomeUtente)
             }
-            .background(Color.white)
-            .padding()
-            .cornerRadius(20)
+            .frame(width: 380, height: 50)
+            .overlay(
+                RoundedRectangle(cornerRadius: 6)
+                    .stroke(Color.secondary, lineWidth: 2)
+            )
            
             HStack(spacing:30) {
                 Button(action:  {immagineUtente = "salamander"
@@ -52,7 +55,6 @@ struct ModificaView: View {
          }
             HStack(spacing:30){
                 Button(action: {immagineUtente = "fox"
-                   
                 }) {
                     Image("fox")
                         .resizable()
@@ -61,7 +63,6 @@ struct ModificaView: View {
                 }
                 
                 Button(action: {immagineUtente = "seal"
-             
                 }) {
                     Image("seal")
                         .resizable()
@@ -100,8 +101,6 @@ struct ModificaView: View {
                         .scaledToFit()
                         .frame(width: 100, height: 100)
                 }
-                
-                
             }
             
           
@@ -114,6 +113,7 @@ struct ModificaView: View {
             }
             )
         }
+        .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Modifica Profilo")
         }
     }

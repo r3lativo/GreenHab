@@ -15,7 +15,7 @@ struct DoveSiButtaView: View {
         NavigationView {
             List {
                 ForEach(searchResults) { tipo in
-                    Section(header: Text(tipo.nomeTipo)) {
+                    Section(header: Text(tipo.nomeTipo) ) {
                         ForEach(tipo.rifiuti) { rifiuto in
                             Text(rifiuto.nomeRifiuto)
                         }
@@ -24,6 +24,7 @@ struct DoveSiButtaView: View {
                 
             }
             .searchable(text: $searchText)
+            .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Dove si butta?")
         }
     }
@@ -34,7 +35,7 @@ struct DoveSiButtaView: View {
         } else {
             let filteredList: [ClasseRifiuti] = tipoRifiuti.map( { tipo in
                 let refiuti = tipo.rifiuti.filter({ $0.nomeRifiuto.lowercased().contains(searchText.lowercased()) })
-                return ClasseRifiuti(nomeTipo: tipo.nomeTipo, rifiuti: refiuti)
+                return ClasseRifiuti(nomeTipo: tipo.nomeTipo, classeIco: "", rifiuti: refiuti)
             })
             
             return filteredList.filter({ !$0.rifiuti.isEmpty })

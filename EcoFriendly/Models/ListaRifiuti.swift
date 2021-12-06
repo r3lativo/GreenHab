@@ -14,6 +14,7 @@ struct Rifiuto: Hashable, Identifiable {
 
 struct ClasseRifiuti: Identifiable {
     let nomeTipo: String
+    let classeIco: String
     let rifiuti: [Rifiuto]
     let id = UUID()
 }
@@ -21,6 +22,7 @@ struct ClasseRifiuti: Identifiable {
 let tipoRifiuti: [ClasseRifiuti]  = [
     
     ClasseRifiuti(nomeTipo: "Carta",
+                  classeIco: "cartaIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Carta regalo"),
                             Rifiuto(nomeRifiuto: "Carta stagnola"),
                             Rifiuto(nomeRifiuto: "Cartoncino"),
@@ -42,6 +44,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                            ]),
     
     ClasseRifiuti(nomeTipo: "Indifferenziato",
+                  classeIco: "indifferenziatoIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Accendini"),
                             Rifiuto(nomeRifiuto: "Addobbi natalizi"),
                             Rifiuto(nomeRifiuto: "Assorbenti"),
@@ -137,6 +140,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                            ]),
     
     ClasseRifiuti(nomeTipo: "Isola Ecologica o Raccoglitori preposti",
+                  classeIco: "isolaIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Abiti Usati"),
                             Rifiuto(nomeRifiuto: "Acquaragia (contenitore pieno o con tracce)"),
                             Rifiuto(nomeRifiuto: "Alberi di Natale finti"),
@@ -207,6 +211,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                            ]),
                   
     ClasseRifiuti(nomeTipo: "Organico",
+                  classeIco: "organicoIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Avanzi di cibo"),
                             Rifiuto(nomeRifiuto: "Batuffoli e bastoncini di cotone biodegradabili"),
                             Rifiuto(nomeRifiuto: "Buste e sacchetti per alimenti in carta sporca"),
@@ -224,6 +229,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                            ]),
     
     ClasseRifiuti(nomeTipo: "Multimateriale (plastica/metalli)",
+                  classeIco: "plasticaIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Acetone (contenitore vuoto"),
                             Rifiuto(nomeRifiuto: "Alluminio"),
                             Rifiuto(nomeRifiuto: "Ammoniaca (contenitore vuoto)"),
@@ -277,6 +283,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                            ]),
     
     ClasseRifiuti(nomeTipo: "Vetro",
+                  classeIco: "vetroIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Bicchieri in vetro"),
                             Rifiuto(nomeRifiuto: "Biglie in vetro"),
                             Rifiuto(nomeRifiuto: "Bottiglie in vetro"),
@@ -284,6 +291,4 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                             Rifiuto(nomeRifiuto: "Profumi (contenitori vuoti in vetro)"),
                             Rifiuto(nomeRifiuto: "Fiale in vetro per uso alimentare")
                            ]),
-    
-    
 ]

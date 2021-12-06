@@ -60,8 +60,8 @@
 				257DA5622750F7290008B8BE /* SfideView.swift */,
 				25FED58B275A1BDA002A4680 /* CoseDaFareView.swift */,
 				257DA55E2750F7130008B8BE /* OggiView.swift */,
-				251B78A2275E646200FF4383 /* RifiutiSpecialiView.swift */,
 				2508A7E92759218300C7340D /* DoveSiButtaView.swift */,
+				251B78A2275E646200FF4383 /* RifiutiSpecialiView.swift */,
 				257DA5642750F7360008B8BE /* ProfiloView.swift */,
 				5C739D26275A2F9E006BBAD5 /* ModificaView.swift */,
 			);

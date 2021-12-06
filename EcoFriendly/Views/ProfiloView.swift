@@ -78,10 +78,13 @@ struct ProfiloView: View {
             .onAppear {
                 nomeUtente = UserDefaults.standard.string(forKey: "nomeUtente") ?? ""
             }
-            
         }
     }
-    
-    
-    
+}
+
+
+struct ProfiloView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfiloView()
+    }
 }

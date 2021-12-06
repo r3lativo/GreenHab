@@ -27,6 +27,7 @@ struct Sfida: Identifiable {
     let spiegazione: String
 }
 
+
 class UserChallenge: ObservableObject {
     
     @Published var sfida: [Sfida] = [
@@ -63,8 +64,19 @@ class UserChallenge: ObservableObject {
             sfidaInCorso: false,
             componenti: [CoseDaFare(immagineCosa: "sapone",
                                     descrizioneCosa: "Cosmetici solidi",
-                                    cosaCompletata: false)
-                         
+                                    cosaCompletata: false),
+                         CoseDaFare(immagineCosa: "cannuccia",
+                                    descrizioneCosa: "Cannuccia riutilizzabile",
+                                    cosaCompletata: false),
+                         CoseDaFare(immagineCosa: "spazzolino",
+                                    descrizioneCosa: "Spazzolino in bambù",
+                                    cosaCompletata: false),
+                         CoseDaFare(immagineCosa: "ecoBag",
+                                    descrizioneCosa: "Tote Bag",
+                                    cosaCompletata: false),
+                         CoseDaFare(immagineCosa: "borraccia",
+                                    descrizioneCosa: "Borraccia",
+                                    cosaCompletata: false),
                          
                         ],
             spiegazione: "Stai per partire? Segui questi consigli sul cosa portare per essere più eco-friendly!"
@@ -76,12 +88,20 @@ class UserChallenge: ObservableObject {
             iconaSfida: "palleDiNatale",
             sfidaCompletata: false,
             sfidaInCorso: false,
-            componenti: [CoseDaFare(immagineCosa: "scarpe",
+            componenti: [CoseDaFare(immagineCosa: "piedi",
                                     descrizioneCosa: "Evita l'automobile, spostati a piedi in cerca di regali",
+                                    cosaCompletata: false),
+                         CoseDaFare(immagineCosa: "regalo",
+                                    descrizioneCosa: "Scegli carta riciclata o stoffe per incartare i tuoi doni",
+                                    cosaCompletata: false),
+                         CoseDaFare(immagineCosa: "luci",
+                                    descrizioneCosa: "Opta per delle luci a LED",
+                                    cosaCompletata: false),
+                         CoseDaFare(immagineCosa: "bigliettoAuguri",
+                                    descrizioneCosa: "Usa biglietti d’auguri senza plastiche o glitter",
                                     cosaCompletata: false)
-                         
                         ],
-            spiegazione: "Il Natale si avvicina! Rendi questa festività eco-friendly seguendo questi consigli"
+            spiegazione: "Il Natale si avvicina! Rendi questa festività\neco-friendly seguendo questi consigli"
         ),
         
         
@@ -92,11 +112,21 @@ class UserChallenge: ObservableObject {
             sfidaInCorso: false,
             componenti: [CoseDaFare(immagineCosa: "cena",
                                     descrizioneCosa: "Prepara una cena senza produrre scarti",
-                                    cosaCompletata: false)
+                                    cosaCompletata: false),
+                         CoseDaFare(immagineCosa: "piattoPosate",
+                                    descrizioneCosa: "Non usare stoviglie di plastica",
+                                    cosaCompletata: false),
+                         CoseDaFare(immagineCosa: "lavastoviglie",
+                                    descrizioneCosa: "Avvia la lavastoviglie solo se completamente carica",
+                                    cosaCompletata: false),
+                         CoseDaFare(immagineCosa: "doccia",
+                                    descrizioneCosa: "Fai una doccia rapida",
+                                    cosaCompletata: false),
+                         CoseDaFare(immagineCosa: "stand-by",
+                                    descrizioneCosa: "Non lasciare nessun dispositivo in stand-by",
+                                    cosaCompletata: false),
                         ],
             spiegazione: "Ecco alcune cose che puoi fare a fine giornata per gravare meno sull’ambiente"
         )
     ]
-    
-    
 }

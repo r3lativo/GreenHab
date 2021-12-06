@@ -41,13 +41,15 @@ struct SfideView: View {
                                         .foregroundColor(Color.coloreVerde)
                                     
                                     HStack {
-                                        Text(challenge.nomeSfida)
-                                            .font(.system(size: 26))
-                                            .foregroundColor(Color.primary)
-                                            .fontWeight(.medium)
-                                            .padding(.leading)
+                                        VStack {
+                                            Text(challenge.nomeSfida)
+                                                .font(.title)
+                                                .foregroundColor(Color.primary)
+                                                .fontWeight(.medium)
+                                                .padding([.top, .leading])
                                             .multilineTextAlignment(.leading)
-                                        
+                                            Spacer()
+                                        }
                                         Spacer()
                                         
                                         Image(challenge.iconaSfida)
@@ -57,7 +59,8 @@ struct SfideView: View {
                                             .padding()
                                     }
                                 }
-                                .frame(height: 180)
+                                .frame(height: 160)
+                                .padding(.bottom, 5)
                             }
                         }
                         .padding([.leading, .trailing])
@@ -82,13 +85,15 @@ struct SfideView: View {
                                     .foregroundColor(Color.coloreVerde)
                                 
                                 HStack {
-                                    Text(challenge.nomeSfida)
-                                        .font(.system(size: 26))
-                                        .foregroundColor(Color.primary)
-                                        .fontWeight(.medium)
-                                        .padding(.leading)
+                                    VStack {
+                                        Text(challenge.nomeSfida)
+                                            .font(.title)
+                                            .foregroundColor(Color.primary)
+                                            .fontWeight(.medium)
+                                            .padding([.top, .leading])
                                         .multilineTextAlignment(.leading)
-                                    
+                                        Spacer()
+                                    }
                                     Spacer()
                                     
                                     Image(challenge.iconaSfida)
@@ -98,7 +103,8 @@ struct SfideView: View {
                                         .padding()
                                 }
                             }
-                            .frame(height: 180)
+                            .frame(height: 160)
+                            .padding(.bottom, 5)
                         }
                     }
                     .padding([.leading, .trailing])

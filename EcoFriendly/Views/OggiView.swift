@@ -11,18 +11,17 @@ struct OggiView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Oggi si butta la carta!")
-                    .font(.system(size:28))
+                Text("Oggi si butta la plastica!")
+                    .font(.title)
                     .multilineTextAlignment(.center)
                     .padding()
                 
-                Image("paperBin")
+                Image("bidonePlastica")
                     .resizable()
+                    .scaledToFit()
                     .frame(width: 300, height: 300)
-                    .padding()
-                
+                                
                 List {
-                    
                     NavigationLink(destination: DoveSiButtaView())
                     {
                         Text("Dove si butta?")
@@ -39,7 +38,6 @@ struct OggiView: View {
                 }
                 .padding(.top, 50.0)
                 
-                
             }
             .navigationTitle("Oggi")
             .symbolVariant(.fill)
@@ -53,5 +51,3 @@ struct Oggi_Previews: PreviewProvider {
         OggiView()
     }
 }
-
-

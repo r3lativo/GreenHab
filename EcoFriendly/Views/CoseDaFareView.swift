@@ -25,7 +25,8 @@ struct CoseDaFareView: View {
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                             Image(task.immagineCosa)
                                 .resizable()
-                                .frame(width: 70, height: 70)
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
                         }
                         .disabled(!challenge.sfidaInCorso)
                         Text(task.descrizioneCosa)
@@ -35,20 +36,18 @@ struct CoseDaFareView: View {
             }
             Button(action: {
                 changeStatus(challenge.id)
-                
             }) {
                 Text("Accetta la sfida!")
-                    .fontWeight(.medium)
                     .font(.system(size: 20))
                     .foregroundColor(.black)
                     .frame(width: 150, height: 50)
                     .background(Color.coloreVerde)
                     .cornerRadius(6)
-                    .shadow(radius: 5)
-                
+                    .shadow(radius: 3)
             }
+            Spacer()
         }
+        .navigationTitle(challenge.nomeSfida)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
-

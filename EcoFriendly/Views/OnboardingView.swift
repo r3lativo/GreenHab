@@ -19,9 +19,9 @@ struct OnboardingView: View {
             Color.coloreCeleste.ignoresSafeArea()
             TabView {
                 PageView(
-                    title: "Benvenuto in GreenHab",
+                    title: "Benvenuto in\nGreenHab",
                     imageName: "planet",
-                    description: "l'app che ti aiuta ad essere più eco-friendly",
+                    description: "l’applicazione che ti aiuterà ad essere più eco-friendly 🌱",
                     showStart: false,
                     showPromptUsername: false,
                     shouldShowOnboarding: $shouldShowOnboarding
@@ -30,16 +30,16 @@ struct OnboardingView: View {
                 PageView(
                     title: "Lanciati in tante nuove sfide",
                     imageName: "mountain",
-                    description: "Sperimenta nuove abitudini ecosostenibili e inizia la tua scalata dei livelli.",
+                    description: "Sperimenta nuove abitudini ecosostenibili grazie alle sfide",
                     showStart: false,
                     showPromptUsername: false,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
                 
                 PageView(
-                    title: "Informati sul riciclaggio",
+                    title: "Informati sul riciclaggio nella tua zona",
                     imageName: "recycle.bin",
-                    description: "Non sai cosa si butta oggi nel tuo comune? Nella sezione Vicino a te avrai tutte le informazioni che ti servono",
+                    description: "Non sai dove e quando buttare i tuoi rifiuti? Scoprilo nella sezione Oggi",
                     showStart: false,
                     showPromptUsername: false,
                     shouldShowOnboarding: $shouldShowOnboarding
@@ -53,8 +53,6 @@ struct OnboardingView: View {
                     showPromptUsername: true,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
-                
-                
                 
             }
             .tabViewStyle(PageTabViewStyle())
@@ -89,11 +87,14 @@ struct PageView: View {
                 HStack {
                     Text("Username")
                         .padding()
-                    TextField("Nome", text: $nomeUtente)
+                        .foregroundColor(Color.primary)
+                    TextField("Digita qui il tuo username", text: $nomeUtente)
                 }
-                .background(Color.white)
-                .padding()
-                .cornerRadius(20)
+                .frame(width: 380, height: 50)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 6)
+                        .stroke(Color.primary, lineWidth: 2)
+                    )
             }
             
             
@@ -109,13 +110,12 @@ struct PageView: View {
                     shouldShowOnboarding.toggle()
                 }, label: {
                     Text("Inizia")
-                        .bold()
                         .font(.system(size: 20))
                         .foregroundColor(.black)
                         .frame(width: 150, height: 50)
                         .background(Color.coloreVerde)
                         .cornerRadius(6)
-                        .shadow(radius: 5)
+                        .shadow(radius: 3)
                 })
             }
         }
