@@ -18,11 +18,13 @@ import SwiftUI
 struct ProfiloView: View {
     @State private var showModal: Bool = false
     
+    var immagineUtente = "polarBear"
+    
     var body: some View {
         NavigationView {
             
             VStack(spacing:20) {
-                Image("polarBear")
+                Image(immagineUtente)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 280, height: 280)
@@ -84,11 +86,11 @@ struct ProfiloView: View {
                 Text("Modifica")
                     .foregroundColor(.teal)
             } )
-//            .padding( .top, 90.0)
+            //            .padding( .top, 90.0)
             .sheet(isPresented: $showModal) {
                 ModificaView(showModal: $showModal)
             }
-           
+            
         }
     }
     

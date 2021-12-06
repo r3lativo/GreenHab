@@ -10,6 +10,7 @@ import SwiftUI
 struct ChooseAnimalView: View {
     @Binding var shouldShowOnboarding: Bool
     @State var userName: String
+ 
     
     var body: some View {
         VStack {
