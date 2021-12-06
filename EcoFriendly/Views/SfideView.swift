@@ -16,14 +16,14 @@ struct SfideView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(sfida) { sfida in
-                    NavigationLink(destination: CoseDaFareView()) {
+                ForEach(sfida) { challenge in
+                    NavigationLink(destination: CoseDaFareView(challenge: challenge)) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 20)
                                 .foregroundColor(Color.coloreVerde)
                             
                             HStack {
-                                Text(sfida.nomeSfida)
+                                Text(challenge.nomeSfida)
                                     .font(.system(size: 26))
                                     .foregroundColor(Color.primary)
                                     .fontWeight(.medium)
@@ -32,7 +32,7 @@ struct SfideView: View {
                                 
                                 Spacer()
                                 
-                                Image(sfida.iconaSfida)
+                                Image(challenge.iconaSfida)
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 100, height: 100)
