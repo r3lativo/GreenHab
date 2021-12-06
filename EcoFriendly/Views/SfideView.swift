@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-//  Qui ci sono le sfide. Andranno divise in "in corso" e "completate"
-
-
-
 
 struct SfideView: View {
     var body: some View {
@@ -35,11 +31,12 @@ struct SfideView: View {
                                 Image(challenge.iconaSfida)
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 100, height: 100)
+                                    .frame(width: 120, height: 120)
                                     .padding()
                             }
                             
                         }
+                        .frame(height: 180)
                         .padding(.top, 5.0)
                     }
                 }

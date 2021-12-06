@@ -14,15 +14,15 @@ struct CoseDaFare: Hashable, Identifiable {
     let id = UUID()
     let immagineCosa: String
     let descrizioneCosa: String
-    let cosaCompletata: Bool
+    var cosaCompletata: Bool
 }
 
 struct Sfida: Identifiable {
     let id = UUID()
     let nomeSfida: String
     let iconaSfida: String
-    let sfidaCompletata: Bool
-    let sfidaInCorso: Bool
+    var sfidaCompletata: Bool
+    var sfidaInCorso: Bool
     let componenti: [CoseDaFare]
     let spiegazione: String
 }
@@ -84,7 +84,7 @@ var sfida: [Sfida] = [
     
     
     Sfida(
-        nomeSfida: "Serata Minimum-Waste",
+        nomeSfida: "Serata \nLow-Waste",
         iconaSfida: "notteStellata",
         sfidaCompletata: false,
         sfidaInCorso: false,

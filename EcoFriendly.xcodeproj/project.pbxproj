@@ -16,10 +16,7 @@
 		257DA5632750F7290008B8BE /* SfideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DA5622750F7290008B8BE /* SfideView.swift */; };
 		257DA5652750F7360008B8BE /* ProfiloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DA5642750F7360008B8BE /* ProfiloView.swift */; };
 		257DA56B275121F30008B8BE /* Sfide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DA56A275121F30008B8BE /* Sfide.swift */; };
-		257DA56D275121FE0008B8BE /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DA56C275121FE0008B8BE /* Utente.swift */; };
 		257F76202756F6270065A040 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F761F2756F6270065A040 /* OnboardingView.swift */; };
-		2594AC9E275768B000A90DA4 /* ImmaginiUtente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2594AC9D275768B000A90DA4 /* ImmaginiUtente.swift */; };
-		2594ACA027576AC800A90DA4 /* ChooseAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2594AC9F27576AC800A90DA4 /* ChooseAnimal.swift */; };
 		25DE06BF275A2D0A00381133 /* ListaRifiuti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE06BE275A2D0A00381133 /* ListaRifiuti.swift */; };
 		25FED58C275A1BDA002A4680 /* CoseDaFareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FED58B275A1BDA002A4680 /* CoseDaFareView.swift */; };
 		5C739D27275A2F9E006BBAD5 /* ModificaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C739D26275A2F9E006BBAD5 /* ModificaView.swift */; };
@@ -36,10 +33,7 @@
 		257DA5622750F7290008B8BE /* SfideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SfideView.swift; sourceTree = "<group>"; };
 		257DA5642750F7360008B8BE /* ProfiloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfiloView.swift; sourceTree = "<group>"; };
 		257DA56A275121F30008B8BE /* Sfide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sfide.swift; sourceTree = "<group>"; };
-		257DA56C275121FE0008B8BE /* Utente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
 		257F761F2756F6270065A040 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		2594AC9D275768B000A90DA4 /* ImmaginiUtente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmaginiUtente.swift; sourceTree = "<group>"; };
-		2594AC9F27576AC800A90DA4 /* ChooseAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAnimal.swift; sourceTree = "<group>"; };
 		25DE06BE275A2D0A00381133 /* ListaRifiuti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaRifiuti.swift; sourceTree = "<group>"; };
 		25FED58B275A1BDA002A4680 /* CoseDaFareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoseDaFareView.swift; sourceTree = "<group>"; };
 		5C739D26275A2F9E006BBAD5 /* ModificaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificaView.swift; sourceTree = "<group>"; };
@@ -76,9 +70,6 @@
 			children = (
 				257DA56A275121F30008B8BE /* Sfide.swift */,
 				25DE06BE275A2D0A00381133 /* ListaRifiuti.swift */,
-				257DA56C275121FE0008B8BE /* Utente.swift */,
-				2594AC9F27576AC800A90DA4 /* ChooseAnimal.swift */,
-				2594AC9D275768B000A90DA4 /* ImmaginiUtente.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,11 +184,8 @@
 				257DA56B275121F30008B8BE /* Sfide.swift in Sources */,
 				25FED58C275A1BDA002A4680 /* CoseDaFareView.swift in Sources */,
 				257DA5632750F7290008B8BE /* SfideView.swift in Sources */,
-				2594ACA027576AC800A90DA4 /* ChooseAnimal.swift in Sources */,
 				257DA55F2750F7130008B8BE /* OggiView.swift in Sources */,
 				2544D68427568E4700D06750 /* MainMainView.swift in Sources */,
-				2594AC9E275768B000A90DA4 /* ImmaginiUtente.swift in Sources */,
-				257DA56D275121FE0008B8BE /* Utente.swift in Sources */,
 				2508A7EA2759218300C7340D /* DoveSiButtaView.swift in Sources */,
 				25DE06BF275A2D0A00381133 /* ListaRifiuti.swift in Sources */,
 				5C739D27275A2F9E006BBAD5 /* ModificaView.swift in Sources */,

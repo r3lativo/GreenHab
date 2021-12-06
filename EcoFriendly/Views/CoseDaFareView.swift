@@ -27,13 +27,18 @@ struct CoseDaFareView: View {
                                 .resizable()
                                 .frame(width: 70, height: 70)
                         }
+                        .disabled(!challenge.sfidaInCorso)
                         Text(task.descrizioneCosa)
                             .padding()
                     }
                     
                 }
             }
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+            Button(action: {
+                if let id = sfida.firstIndex(where: {$0.id == challenge.id}) {
+                    sfida[id].sfidaInCorso = true
+                }
+            }) {
                 Text("Accetta la sfida!")
                     .fontWeight(.medium)
                     .font(.system(size: 20))
@@ -45,5 +50,7 @@ struct CoseDaFareView: View {
                 
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
+

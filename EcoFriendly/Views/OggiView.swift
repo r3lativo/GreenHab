@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-//  Qui ci sono gli articoli e le curiosità.
-//  è ancora in fase di progettazione.
-
-
-
 struct OggiView: View {
     var body: some View {
         NavigationView {
