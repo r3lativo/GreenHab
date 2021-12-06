@@ -210,7 +210,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                   rifiuti: [Rifiuto(nomeRifiuto: "Avanzi di cibo"),
                             Rifiuto(nomeRifiuto: "Batuffoli e bastoncini di cotone biodegradabili"),
                             Rifiuto(nomeRifiuto: "Buste e sacchetti per alimenti in carta sporca"),
-                            Rifiuto(nomeRifiuto: "Bustina del tè e della camomilla"),
+                            Rifiuto(nomeRifiuto: "Bustina del tè (the) e della camomilla"),
                             Rifiuto(nomeRifiuto: "Capelli"),
                             Rifiuto(nomeRifiuto: "Carbone spento"),
                             Rifiuto(nomeRifiuto: "Carta unta per alimenti"),
