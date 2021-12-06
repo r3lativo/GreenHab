@@ -6,34 +6,38 @@
 //
 
 import SwiftUI
-import UIKit
 
 struct DoveSiButtaView: View {
     
     @State private var searchText = ""
-    var names = ["Goku", "Gohan", "Vegeta", "Trunks"]
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(tipoRifiuti) { tipo in
+                ForEach(searchResults) { tipo in
                     Section(header: Text(tipo.nomeTipo)) {
                         ForEach(tipo.rifiuti) { rifiuto in
                             Text(rifiuto.nomeRifiuto)
                         }
                     }
                 }
+                
             }
             .searchable(text: $searchText)
             .navigationTitle("Dove si butta?")
         }
     }
     
-    var searchResults: [String] {
+    var searchResults: [ClasseRifiuti] {
         if searchText.isEmpty {
-            return names
+            return tipoRifiuti
         } else {
-            return names.filter({ $0.contains(searchText) })
+            let filteredList: [ClasseRifiuti] = tipoRifiuti.map( { tipo in
+                let refiuti = tipo.rifiuti.filter({ $0.nomeRifiuto.lowercased().contains(searchText.lowercased()) })
+                return ClasseRifiuti(nomeTipo: tipo.nomeTipo, rifiuti: refiuti)
+            })
+            
+            return filteredList.filter({ !$0.rifiuti.isEmpty })
         }
     }
 }
