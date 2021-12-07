@@ -13,7 +13,8 @@ struct CoseDaFareView: View {
     let changeStatus: (UUID) -> Void
     let changeTask: (UUID) -> Void
     
-    
+    @State private var showAlert = false
+
     var body: some View {
         VStack {
             
@@ -45,6 +46,7 @@ struct CoseDaFareView: View {
                 Button(action: {
                     changeStatus(challenge.id)
                     
+                    
 //                    vorrei restare sulla stessa schermata
 //                    ma invece mi fa tornare indietro
                 }) {
@@ -58,9 +60,11 @@ struct CoseDaFareView: View {
                 }
                 
             } else if challenge.sfidaCompletata == true {
+               
                 Button(action: {
+                    showAlert = true
                     changeStatus(challenge.id)
-                    
+                        
                     
                 }) {
                     Text("Segna la sfida come completata")
@@ -70,6 +74,12 @@ struct CoseDaFareView: View {
                         .background(Color.coloreVerde)
                         .cornerRadius(6)
                         .shadow(radius: 3)
+                }
+                .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("Hai ottenuto un badge!"),
+                        message: Text("puoi vederlo nella sezione profilo")
+                    )
                 }
             }
             
