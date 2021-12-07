@@ -37,32 +37,24 @@ struct ProfiloView: View {
                 
                 ScrollView(.horizontal) {
                     HStack(spacing: 30) {
-                        VStack{
-                            Image("christmas")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 170)
-                            Text("VerdeNatale")
-                                .fontWeight(.light)
-                        }
-                        VStack{
-                            Image("shopping")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 170)
-                            Text("SpesaGreen")
-                                .fontWeight(.light)
-                        }
-                        VStack{
-                            Image("night")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 170)
-                            Text("SerataLowWaste")
-                                .fontWeight(.light)
-                        }
+                        
+                        Image("christmas")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 170)
+                        
+                        Image("shopping")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 170)
+                        
+                        Image("night")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 170)
+                        
                     }
-                    .padding(.bottom)
+                    .padding([.bottom, .trailing, .leading])
                 }
                 Spacer()
             }

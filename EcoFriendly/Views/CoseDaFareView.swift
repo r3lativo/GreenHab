@@ -78,7 +78,7 @@ struct CoseDaFareView: View {
                 .alert(isPresented: $showAlert) {
                     Alert(
                         title: Text("Hai ottenuto un badge!"),
-                        message: Text("puoi vederlo nella sezione profilo")
+                        message: Text("Puoi vederlo nella sezione profilo!")
                     )
                 }
             }
