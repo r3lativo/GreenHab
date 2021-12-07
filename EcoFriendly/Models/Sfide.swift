@@ -23,7 +23,7 @@ struct Sfida: Identifiable {
     let iconaSfida: String
     var sfidaCompletata: Bool
     var sfidaInCorso: Bool
-    let componenti: [CoseDaFare]
+    var componenti: [CoseDaFare]
     let spiegazione: String
 }
 

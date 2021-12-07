@@ -35,6 +35,15 @@ struct SfideView: View {
                                 }) {
                                     userChallenges.sfida[id].sfidaInCorso = true
                                 }
+                            }, changeTask: { index in
+                                if let id = challenge.componenti.firstIndex(where: {$0.id == index
+                                    
+                                }), let currentChallenge = userChallenges.sfida.firstIndex(where: {
+                                    $0.id == challenge.id
+                                }) {
+                                    userChallenges.sfida[currentChallenge].componenti[id].cosaCompletata.toggle()
+                                }
+                                
                             } )) {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 20)
@@ -79,6 +88,15 @@ struct SfideView: View {
                             }) {
                                 userChallenges.sfida[id].sfidaInCorso = true
                             }
+                        }, changeTask: { index in
+                            if let id = challenge.componenti.firstIndex(where: {$0.id == index
+                                
+                            }), let currentChallenge = userChallenges.sfida.firstIndex(where: {
+                                $0.id == challenge.id
+                            }) {
+                                userChallenges.sfida[currentChallenge].componenti[id].cosaCompletata.toggle()
+                            }
+                            
                         } )) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 20)

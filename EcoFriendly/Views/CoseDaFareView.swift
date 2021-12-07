@@ -11,6 +11,7 @@ struct CoseDaFareView: View {
     
     let challenge: Sfida
     let changeStatus: (UUID) -> Void
+    let changeTask: (UUID) -> Void
     
     var body: some View {
         VStack {
@@ -22,11 +23,14 @@ struct CoseDaFareView: View {
             List {
                 ForEach(challenge.componenti) { task in
                     HStack {
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                        Button(action: {
+                            changeTask(task.id)
+                        }) {
                             Image(task.immagineCosa)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 50, height: 50)
+                                .saturation(task.cosaCompletata ? 1 : -10)
                         }
                         .disabled(!challenge.sfidaInCorso)
                         Text(task.descrizioneCosa)
