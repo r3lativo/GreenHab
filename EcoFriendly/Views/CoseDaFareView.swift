@@ -25,6 +25,7 @@ struct CoseDaFareView: View {
                     HStack {
                         Button(action: {
                             changeTask(task.id)
+//                            cambiare completata da true a false
                         }) {
                             Image(task.immagineCosa)
                                 .resizable()
@@ -38,18 +39,37 @@ struct CoseDaFareView: View {
                     }
                 }
             }
-            Button(action: {
-                changeStatus(challenge.id)
-            }) {
-                Text("Accetta la sfida!")
-                    .font(.system(size: 20))
-                    .foregroundColor(.black)
-                    .frame(width: 380, height: 50)
-                    .background(Color.coloreVerde)
-                    .cornerRadius(6)
-                    .shadow(radius: 3)
+            
+            if challenge.sfidaInCorso == false {
+                Button(action: {
+                    changeStatus(challenge.id)
+//                    vorrei restare sulla stessa schermata
+//                    ma invece mi fa tornare indietro
+                }) {
+                    Text("Accetta la sfida!")
+                        .font(.system(size: 20))
+                        .foregroundColor(.black)
+                        .frame(width: 380, height: 50)
+                        .background(Color.coloreVerde)
+                        .cornerRadius(6)
+                        .shadow(radius: 3)
+                }
+                
+            } else if challenge.sfidaCompletata == true {
+                Button(action: {
+                    changeStatus(challenge.id)
+                    
+                    
+                }) {
+                    Text("Segna la sfida come completata")
+                        .font(.system(size: 20))
+                        .foregroundColor(.black)
+                        .frame(width: 380, height: 50)
+                        .background(Color.coloreVerde)
+                        .cornerRadius(6)
+                        .shadow(radius: 3)
+                }
             }
-            Spacer()
             
         }
         .navigationTitle(challenge.nomeSfida)

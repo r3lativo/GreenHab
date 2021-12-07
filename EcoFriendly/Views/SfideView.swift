@@ -42,6 +42,15 @@ struct SfideView: View {
                                     $0.id == challenge.id
                                 }) {
                                     userChallenges.sfida[currentChallenge].componenti[id].cosaCompletata.toggle()
+                                    
+                                    if userChallenges.sfida[currentChallenge].componenti.filter({!$0.cosaCompletata}).isEmpty {
+                                        userChallenges.sfida[currentChallenge].sfidaCompletata = true
+                                        
+                                       @State var badges = userChallenges.sfida.filter{$0.sfidaCompletata}.reduce([String](), {$0 + [$1.iconaSfida]} )
+                                        UserDefaults.standard.set(badges, forKey: "badges")
+
+                                    }
+                                    
                                 }
                                 
                             } )) {
@@ -74,10 +83,10 @@ struct SfideView: View {
                         }
                         .padding([.leading, .trailing])
                     }
-                    Text("scegli una nuova sfida")
+                    Text("scegli una sfida")
                         .font(.title2)
                         .fontWeight(.medium)
-                        .padding(.trailing, 160.0)
+                        .padding(.trailing, 220.0)
                     
                     ForEach(userChallenges.sfida.filter({
                         !$0.sfidaInCorso
@@ -88,6 +97,8 @@ struct SfideView: View {
                             }) {
                                 userChallenges.sfida[id].sfidaInCorso = true
                             }
+                            
+                            
                         }, changeTask: { index in
                             if let id = challenge.componenti.firstIndex(where: {$0.id == index
                                 

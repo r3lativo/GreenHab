@@ -9,9 +9,11 @@ import SwiftUI
 
 
 struct ProfiloView: View {
+    
     @State private var showModal: Bool = false
     @State var nomeUtente = UserDefaults.standard.string(forKey: "nomeUtente") ?? ""
     @State var immagineUtente = "polarBear"
+//    @Binding var badges: [String]
     
     var body: some View {
         NavigationView {
@@ -34,35 +36,41 @@ struct ProfiloView: View {
                     .padding(.trailing, 270.0)
                 
                 
+                
+               /*
                 HStack(alignment: .center, spacing: 50) {
-                    VStack{
-                        Image("christmas")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 80, height: 80)
-                        Text("VerdeNatale")
-                            .font(.footnote)
-                            .fontWeight(.light)
-                    }
-                    VStack{
-                        Image("shopping")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 80, height: 80)
-                        Text("SpesaGreen")
-                            .font(.footnote)
-                            .fontWeight(.light)
-                    }
-                    VStack{
-                        Image("night")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 80, height: 80)
-                        Text("SerataLowWaste")
-                            .font(.footnote)
-                            .fontWeight(.light)
-                    }
+                    
+                        VStack{
+                            Image("christmas")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 80, height: 80)
+                            Text("VerdeNatale")
+                                .font(.footnote)
+                                .fontWeight(.light)
+                        }
+                        VStack{
+                            Image("shopping")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 80, height: 80)
+                            Text("SpesaGreen")
+                                .font(.footnote)
+                                .fontWeight(.light)
+                        }
+                        VStack{
+                            Image("night")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 80, height: 80)
+                            Text("SerataLowWaste")
+                                .font(.footnote)
+                                .fontWeight(.light)
+                        }
+                    
                 }
+                */
+                
                 Spacer()
             }
             .navigationTitle("Profilo")
