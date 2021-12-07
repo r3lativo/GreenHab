@@ -13,7 +13,7 @@ struct ProfiloView: View {
     @State private var showModal: Bool = false
     @State var nomeUtente = UserDefaults.standard.string(forKey: "nomeUtente") ?? ""
     @State var immagineUtente = "polarBear"
-//    @Binding var badges: [String]
+    //    @Binding var badges: [String]
     
     var body: some View {
         NavigationView {
@@ -35,42 +35,35 @@ struct ProfiloView: View {
                     .fontWeight(.light)
                     .padding(.trailing, 270.0)
                 
-                
-                
-               /*
-                HStack(alignment: .center, spacing: 50) {
-                    
+                ScrollView(.horizontal) {
+                    HStack(spacing: 30) {
                         VStack{
                             Image("christmas")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 80, height: 80)
+                                .frame(height: 170)
                             Text("VerdeNatale")
-                                .font(.footnote)
                                 .fontWeight(.light)
                         }
                         VStack{
                             Image("shopping")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 80, height: 80)
+                                .frame(height: 170)
                             Text("SpesaGreen")
-                                .font(.footnote)
                                 .fontWeight(.light)
                         }
                         VStack{
                             Image("night")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 80, height: 80)
+                                .frame(height: 170)
                             Text("SerataLowWaste")
-                                .font(.footnote)
                                 .fontWeight(.light)
                         }
-                    
+                    }
+                    .padding(.bottom)
                 }
-                */
-                
                 Spacer()
             }
             .navigationTitle("Profilo")

@@ -21,24 +21,39 @@ struct OggiView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 300)
-                      
                 
-                List {
-                    NavigationLink(destination: DoveSiButtaView())
-                    {
-                        Text("Dove si butta?")
-                            .frame(height: 40)
-                    }
-                    
-                    NavigationLink(destination: RifiutiSpecialiView())
-                    {
-                        Text("Rifiuti Speciali")
-                            .frame(height: 40)
-                    }
-                    .disabled(true)
-
+                Spacer()
+                
+                
+                NavigationLink(destination: DoveSiButtaView())
+                {
+                    Text("Dove si butta?")
+                        .frame(width: 380, height: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(Color.secondary, lineWidth: 1)
+                                .shadow(radius: 5)
+                        )
+                        .foregroundColor(.primary)
                 }
-                .padding(.top, 50.0)
+                .background(Color.coloreVerde)
+
+                
+                NavigationLink(destination: RifiutiSpecialiView())
+                {
+                    Text("Rifiuti Speciali")
+                        .frame(width: 380, height: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(Color.secondary, lineWidth: 1)
+                                .shadow(radius: 3)
+                            )
+                }
+                .background(Color.coloreVerde)
+                .disabled(true)
+                .padding(.bottom, 50.0)
+                
+                
                 
             }
             .navigationTitle("Oggi")

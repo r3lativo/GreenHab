@@ -12,6 +12,7 @@ struct SfideView: View {
     
     @StateObject var userChallenges = UserChallenge()
     
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -57,6 +58,8 @@ struct SfideView: View {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 20)
                                         .foregroundColor(Color.coloreVerde)
+                                        .shadow(radius: 5)
+
                                     
                                     HStack {
                                         VStack {
@@ -112,6 +115,7 @@ struct SfideView: View {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 20)
                                     .foregroundColor(Color.coloreVerde)
+                                    .shadow(radius: 5)
                                 
                                 HStack {
                                     VStack {

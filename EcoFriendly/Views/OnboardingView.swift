@@ -110,7 +110,7 @@ struct PageView: View {
                 }, label: {
                     Text("Inizia")
                         .font(.system(size: 20))
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .frame(width: 150, height: 50)
                         .background(Color.coloreVerde)
                         .cornerRadius(6)

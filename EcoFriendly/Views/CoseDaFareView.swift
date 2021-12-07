@@ -13,6 +13,7 @@ struct CoseDaFareView: View {
     let changeStatus: (UUID) -> Void
     let changeTask: (UUID) -> Void
     
+    
     var body: some View {
         VStack {
             
@@ -43,6 +44,7 @@ struct CoseDaFareView: View {
             if challenge.sfidaInCorso == false {
                 Button(action: {
                     changeStatus(challenge.id)
+                    
 //                    vorrei restare sulla stessa schermata
 //                    ma invece mi fa tornare indietro
                 }) {
