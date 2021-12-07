@@ -44,7 +44,7 @@ struct CoseDaFareView: View {
                 Text("Accetta la sfida!")
                     .font(.system(size: 20))
                     .foregroundColor(.black)
-                    .frame(width: 150, height: 50)
+                    .frame(width: 380, height: 50)
                     .background(Color.coloreVerde)
                     .cornerRadius(6)
                     .shadow(radius: 3)
@@ -56,3 +56,5 @@ struct CoseDaFareView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 }
+
+

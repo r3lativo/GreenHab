@@ -12,7 +12,6 @@ struct DoveSiButtaView: View {
     @State private var searchText = ""
     
     var body: some View {
-        NavigationView {
             List {
                 ForEach(searchResults) { tipo in
                     Section(header: Text(tipo.nomeTipo) ) {
@@ -27,7 +26,7 @@ struct DoveSiButtaView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Dove si butta?")
         }
-    }
+    
     
     var searchResults: [ClasseRifiuti] {
         if searchText.isEmpty {

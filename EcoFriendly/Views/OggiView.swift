@@ -12,7 +12,7 @@ struct OggiView: View {
         NavigationView {
             VStack {
                 
-                Text("...si butta la plastica!")
+                Text("Oggi si butta la plastica!")
                     .font(.title)
                     .multilineTextAlignment(.center)
                     .padding()

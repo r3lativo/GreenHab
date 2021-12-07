@@ -21,7 +21,7 @@ struct ClasseRifiuti: Identifiable {
 
 let tipoRifiuti: [ClasseRifiuti]  = [
     
-    ClasseRifiuti(nomeTipo: "Carta",
+    ClasseRifiuti(nomeTipo: "Carta 📦",
                   classeIco: "cartaIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Carta regalo"),
                             Rifiuto(nomeRifiuto: "Carta stagnola"),
@@ -43,7 +43,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                             Rifiuto(nomeRifiuto: "Scatole per alimenti (anche se contengono finestre di plastica)")
                            ]),
     
-    ClasseRifiuti(nomeTipo: "Indifferenziato",
+    ClasseRifiuti(nomeTipo: "Indifferenziato 💽",
                   classeIco: "indifferenziatoIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Accendini"),
                             Rifiuto(nomeRifiuto: "Addobbi natalizi"),
@@ -58,7 +58,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                             Rifiuto(nomeRifiuto: "Carta sporca"),
                             Rifiuto(nomeRifiuto: "Carta vetrata"),
                             Rifiuto(nomeRifiuto: "Cassette audio e video"),
-                            Rifiuto(nomeRifiuto: "CD e Cd-rom"),
+                            Rifiuto(nomeRifiuto: "CD e CD-rom"),
                             Rifiuto(nomeRifiuto: "Cenere spenta di sigarette"),
                             Rifiuto(nomeRifiuto: "Cera"),
                             Rifiuto(nomeRifiuto: "Cerotti"),
@@ -139,7 +139,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                             Rifiuto(nomeRifiuto: "Zoccoli")
                            ]),
     
-    ClasseRifiuti(nomeTipo: "Isola Ecologica o Raccoglitori preposti",
+    ClasseRifiuti(nomeTipo: "Isola Ecologica 🏝\no Raccoglitori preposti ♻️",
                   classeIco: "isolaIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Abiti Usati"),
                             Rifiuto(nomeRifiuto: "Acquaragia (contenitore pieno o con tracce)"),
@@ -210,7 +210,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                             Rifiuto(nomeRifiuto: "Zanzariere")
                            ]),
                   
-    ClasseRifiuti(nomeTipo: "Organico",
+    ClasseRifiuti(nomeTipo: "Organico 🍌",
                   classeIco: "organicoIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Avanzi di cibo"),
                             Rifiuto(nomeRifiuto: "Batuffoli e bastoncini di cotone biodegradabili"),
@@ -220,15 +220,15 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                             Rifiuto(nomeRifiuto: "Carbone spento"),
                             Rifiuto(nomeRifiuto: "Carta unta per alimenti"),
                             Rifiuto(nomeRifiuto: "Cenere spenta di legna"),
-                            Rifiuto(nomeRifiuto: "Fazzoletto di carta sporco"),
                             Rifiuto(nomeRifiuto: "Pettini in legno"),
                             Rifiuto(nomeRifiuto: "Piante"),
                             Rifiuto(nomeRifiuto: "Piume di animali (non sintetiche)"),
                             Rifiuto(nomeRifiuto: "Ramaglie"),
-                            Rifiuto(nomeRifiuto: "Terriccio per piante")
+                            Rifiuto(nomeRifiuto: "Terriccio per piante"),
+                            Rifiuto(nomeRifiuto: "Tovagliolo di carta sporco")
                            ]),
     
-    ClasseRifiuti(nomeTipo: "Multimateriale (plastica/metalli)",
+    ClasseRifiuti(nomeTipo: "Multimateriale (plastica/metalli) 🥫",
                   classeIco: "plasticaIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Acetone (contenitore vuoto"),
                             Rifiuto(nomeRifiuto: "Alluminio"),
@@ -282,7 +282,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                             Rifiuto(nomeRifiuto: "Zaini in plastica"),
                            ]),
     
-    ClasseRifiuti(nomeTipo: "Vetro",
+    ClasseRifiuti(nomeTipo: "Vetro 🍾",
                   classeIco: "vetroIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Bicchieri in vetro"),
                             Rifiuto(nomeRifiuto: "Biglie in vetro"),
