@@ -15,7 +15,7 @@ struct ModificaView: View {
     
     var body: some View {
         NavigationView {
-        VStack(spacing: 50){
+        VStack(spacing: 30){
             
             HStack {
                 Text("Username")
@@ -28,7 +28,11 @@ struct ModificaView: View {
                 RoundedRectangle(cornerRadius: 6)
                     .stroke(Color.secondary, lineWidth: 2)
             )
+            .padding()
+            
            
+            
+            
             HStack(spacing:30) {
                 Button(action:  {immagineUtente = "salamander"
                 } ) {
@@ -102,7 +106,6 @@ struct ModificaView: View {
                         .frame(width: 100, height: 100)
                 }
             }
-            
           
             
             .navigationBarItems(trailing:

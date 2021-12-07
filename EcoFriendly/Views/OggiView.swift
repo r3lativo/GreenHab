@@ -11,7 +11,8 @@ struct OggiView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Oggi si butta la plastica!")
+                
+                Text("...si butta la plastica!")
                     .font(.title)
                     .multilineTextAlignment(.center)
                     .padding()
@@ -20,7 +21,8 @@ struct OggiView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 300)
-                                
+                      
+                
                 List {
                     NavigationLink(destination: DoveSiButtaView())
                     {

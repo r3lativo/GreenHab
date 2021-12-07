@@ -21,15 +21,20 @@ struct ProfiloView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 280, height: 280)
+                    .padding([.top, .leading, .trailing])
+                
                 Text(UserDefaults.standard.string(forKey: "nomeUtente") ?? "")
                     .font(.title)
                     .fontWeight(.regular)
+                    .padding(.bottom)
+                
                 Text("Progressi")
-                    .font(.largeTitle)
+                    .font(.title)
                     .fontWeight(.light)
+                    .padding(.trailing, 270.0)
                 
                 
-                HStack(alignment: .center, spacing: 60) {
+                HStack(alignment: .center, spacing: 50) {
                     VStack{
                         Image("christmas")
                             .resizable()

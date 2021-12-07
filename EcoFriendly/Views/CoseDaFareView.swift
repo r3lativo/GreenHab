@@ -46,6 +46,7 @@ struct CoseDaFareView: View {
                     .shadow(radius: 3)
             }
             Spacer()
+            
         }
         .navigationTitle(challenge.nomeSfida)
         .navigationBarTitleDisplayMode(.inline)

@@ -13,13 +13,12 @@ import SwiftUI
 struct OnboardingView: View {
     
     @Binding var shouldShowOnboarding: Bool
+    
         
     var body: some View {
-        ZStack {
-            Color.coloreCeleste.ignoresSafeArea()
             TabView {
                 PageView(
-                    title: "Benvenuto in\nGreenHab",
+                    title: "Benvenuto in\n GreenHab",
                     imageName: "planet",
                     description: "l’applicazione che ti aiuterà ad essere più eco-friendly 🌱",
                     showStart: false,
@@ -56,7 +55,7 @@ struct OnboardingView: View {
                 
             }
             .tabViewStyle(PageTabViewStyle())
-        }
+            .background(Color.coloreCeleste).ignoresSafeArea()
     }
 }
 
