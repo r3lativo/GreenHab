@@ -79,7 +79,7 @@ class UserChallenge: ObservableObject {
                                     cosaCompletata: false),
                          
                         ],
-            spiegazione: "Stai per partire? Segui questi consigli sul cosa portare per essere più eco-friendly!"
+            spiegazione: "Stai per partire? Ti consigliamo di procurarti questi prodotti eco-friendly per il tuo viaggio sostenibile!"
         ),
         
         

@@ -75,14 +75,16 @@ struct CoseDaFareView: View {
                         .cornerRadius(6)
                         .shadow(radius: 3)
                 }
+                
                 .alert(isPresented: $showAlert) {
                     Alert(
                         title: Text("Hai ottenuto un badge!"),
                         message: Text("Puoi vederlo nella sezione profilo!")
                     )
                 }
+               
             }
-            
+              
         }
         .navigationTitle(challenge.nomeSfida)
         .navigationBarTitleDisplayMode(.inline)
