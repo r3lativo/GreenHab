@@ -13,7 +13,7 @@ struct ProfiloView: View {
     @State private var showModal: Bool = false
     @State var nomeUtente = UserDefaults.standard.string(forKey: "nomeUtente") ?? ""
     @State var immagineUtente = "polarBear"
-    //    @Binding var badges: [String]
+    let badges: [String] = UserDefaults.standard.object(forKey: "badges") as? [String] ?? []
     
     var body: some View {
         NavigationView {
@@ -38,20 +38,28 @@ struct ProfiloView: View {
                 ScrollView(.horizontal) {
                     HStack(spacing: 30) {
                         
-                        Image("christmas")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 170)
+                        ForEach(badges, id:\.self) { badge in
+                            Image("badge_\(badge)")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 170)
+                        }
                         
-                        Image("shopping")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 170)
                         
-                        Image("night")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 170)
+//                        Image("christmas")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(height: 170)
+//
+//                        Image("shopping")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(height: 170)
+//
+//                        Image("night")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(height: 170)
                         
                     }
                     .padding([.bottom, .trailing, .leading])

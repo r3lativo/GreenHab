@@ -47,13 +47,19 @@ struct SfideView: View {
                                     if userChallenges.sfida[currentChallenge].componenti.filter({!$0.cosaCompletata}).isEmpty {
                                         userChallenges.sfida[currentChallenge].sfidaCompletata = true
                                         
-                                       @State var badges = userChallenges.sfida.filter{$0.sfidaCompletata}.reduce([String](), {$0 + [$1.iconaSfida]} )
+                                       let badges = userChallenges.sfida.filter{$0.sfidaCompletata}.reduce([String](), {$0 + [$1.iconaSfida]} )
                                         UserDefaults.standard.set(badges, forKey: "badges")
 
                                     }
                                     
                                 }
                                 
+                            }, makeCompleted: { index in
+                                if let id = userChallenges.sfida.firstIndex(where: {
+                                    $0.id == index
+                                }) {
+                                    userChallenges.sfida[id].sfidaInCorso = false
+                                }
                             } )) {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 20)
@@ -109,8 +115,23 @@ struct SfideView: View {
                                 $0.id == challenge.id
                             }) {
                                 userChallenges.sfida[currentChallenge].componenti[id].cosaCompletata.toggle()
+                                
+                                if userChallenges.sfida[currentChallenge].componenti.filter({!$0.cosaCompletata}).isEmpty {
+                                    userChallenges.sfida[currentChallenge].sfidaCompletata = true
+                                    
+                                   let badges = userChallenges.sfida.filter{$0.sfidaCompletata}.reduce([String](), {$0 + [$1.iconaSfida]} )
+                                    UserDefaults.standard.set(badges, forKey: "badges")
+
+                                }
+                                
                             }
                             
+                        }, makeCompleted: { index in
+                            if let id = userChallenges.sfida.firstIndex(where: {
+                                $0.id == index
+                            }) {
+                                userChallenges.sfida[id].sfidaInCorso = false
+                            }
                         } )) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 20)

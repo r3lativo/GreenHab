@@ -12,7 +12,9 @@ struct CoseDaFareView: View {
     let challenge: Sfida
     let changeStatus: (UUID) -> Void
     let changeTask: (UUID) -> Void
+    let makeCompleted: (UUID) -> Void
     
+    @Environment(\.presentationMode) var presentationMode
     @State private var showAlert = false
 
     var body: some View {
@@ -45,7 +47,7 @@ struct CoseDaFareView: View {
             if challenge.sfidaInCorso == false {
                 Button(action: {
                     changeStatus(challenge.id)
-                    
+                    presentationMode.wrappedValue.dismiss()
                     
 //                    vorrei restare sulla stessa schermata
 //                    ma invece mi fa tornare indietro
@@ -58,13 +60,14 @@ struct CoseDaFareView: View {
                         .cornerRadius(6)
                         .shadow(radius: 3)
                 }
+                .padding(.bottom)
                 
             } else if challenge.sfidaCompletata == true {
                
                 Button(action: {
                     showAlert = true
-                    changeStatus(challenge.id)
-                        
+                    makeCompleted(challenge.id)
+                    presentationMode.wrappedValue.dismiss()
                     
                 }) {
                     Text("Segna la sfida come completata")
@@ -75,6 +78,7 @@ struct CoseDaFareView: View {
                         .cornerRadius(6)
                         .shadow(radius: 3)
                 }
+                .padding(.bottom)
                 
                 .alert(isPresented: $showAlert) {
                     Alert(
