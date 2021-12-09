@@ -201,5 +201,6 @@ struct SfideView: View {
 struct SfideView_Previews: PreviewProvider {
     static var previews: some View {
         SfideView()
+            
     }
 }

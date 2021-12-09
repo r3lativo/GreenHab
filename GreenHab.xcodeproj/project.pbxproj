@@ -27,7 +27,7 @@
 		2508A7E92759218300C7340D /* DoveSiButtaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoveSiButtaView.swift; sourceTree = "<group>"; };
 		251B78A2275E646200FF4383 /* RifiutiSpecialiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RifiutiSpecialiView.swift; sourceTree = "<group>"; };
 		2544D68327568E4700D06750 /* MainMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMainView.swift; sourceTree = "<group>"; };
-		257DA54B2750F6820008B8BE /* EcoFriendly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoFriendly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		257DA54B2750F6820008B8BE /* GreenHab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenHab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		257DA54E2750F6820008B8BE /* EcoFriendlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoFriendlyApp.swift; sourceTree = "<group>"; };
 		257DA5522750F6820008B8BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		257DA5552750F6820008B8BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		257DA54C2750F6820008B8BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				257DA54B2750F6820008B8BE /* EcoFriendly.app */,
+				257DA54B2750F6820008B8BE /* GreenHab.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,9 +116,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		257DA54A2750F6820008B8BE /* EcoFriendly */ = {
+		257DA54A2750F6820008B8BE /* GreenHab */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 257DA5592750F6820008B8BE /* Build configuration list for PBXNativeTarget "EcoFriendly" */;
+			buildConfigurationList = 257DA5592750F6820008B8BE /* Build configuration list for PBXNativeTarget "GreenHab" */;
 			buildPhases = (
 				257DA5472750F6820008B8BE /* Sources */,
 				257DA5482750F6820008B8BE /* Frameworks */,
@@ -128,9 +128,9 @@
 			);
 			dependencies = (
 			);
-			name = EcoFriendly;
+			name = GreenHab;
 			productName = EcoFriendly;
-			productReference = 257DA54B2750F6820008B8BE /* EcoFriendly.app */;
+			productReference = 257DA54B2750F6820008B8BE /* GreenHab.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,7 +148,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 257DA5462750F6820008B8BE /* Build configuration list for PBXProject "EcoFriendly" */;
+			buildConfigurationList = 257DA5462750F6820008B8BE /* Build configuration list for PBXProject "GreenHab" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -161,7 +161,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				257DA54A2750F6820008B8BE /* EcoFriendly */,
+				257DA54A2750F6820008B8BE /* GreenHab */,
 			);
 		};
 /* End PBXProject section */
@@ -340,7 +340,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.temsustainability.EcoFriendly;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GreenHab;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -371,7 +371,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.temsustainability.EcoFriendly;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GreenHab;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -382,7 +382,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		257DA5462750F6820008B8BE /* Build configuration list for PBXProject "EcoFriendly" */ = {
+		257DA5462750F6820008B8BE /* Build configuration list for PBXProject "GreenHab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				257DA5572750F6820008B8BE /* Debug */,
@@ -391,7 +391,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		257DA5592750F6820008B8BE /* Build configuration list for PBXNativeTarget "EcoFriendly" */ = {
+		257DA5592750F6820008B8BE /* Build configuration list for PBXNativeTarget "GreenHab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				257DA55A2750F6820008B8BE /* Debug */,

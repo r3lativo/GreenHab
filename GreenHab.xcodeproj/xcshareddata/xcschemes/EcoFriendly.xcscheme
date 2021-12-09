@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "257DA54A2750F6820008B8BE"
-               BuildableName = "EcoFriendly.app"
-               BlueprintName = "EcoFriendly"
-               ReferencedContainer = "container:EcoFriendly.xcodeproj">
+               BuildableName = "GreenHab.app"
+               BlueprintName = "GreenHab"
+               ReferencedContainer = "container:GreenHab.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "257DA54A2750F6820008B8BE"
-            BuildableName = "EcoFriendly.app"
-            BlueprintName = "EcoFriendly"
-            ReferencedContainer = "container:EcoFriendly.xcodeproj">
+            BuildableName = "GreenHab.app"
+            BlueprintName = "GreenHab"
+            ReferencedContainer = "container:GreenHab.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "257DA54A2750F6820008B8BE"
-            BuildableName = "EcoFriendly.app"
-            BlueprintName = "EcoFriendly"
-            ReferencedContainer = "container:EcoFriendly.xcodeproj">
+            BuildableName = "GreenHab.app"
+            BlueprintName = "GreenHab"
+            ReferencedContainer = "container:GreenHab.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
