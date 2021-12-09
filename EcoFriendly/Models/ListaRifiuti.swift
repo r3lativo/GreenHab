@@ -62,6 +62,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                             Rifiuto(nomeRifiuto: "Cenere spenta di sigarette"),
                             Rifiuto(nomeRifiuto: "Cera"),
                             Rifiuto(nomeRifiuto: "Cerotti"),
+                            Rifiuto(nomeRifiuto: "Cotton fioc"),
                             Rifiuto(nomeRifiuto: "Cover di cellulari"),
                             Rifiuto(nomeRifiuto: "Cucchiai di legno"),
                             Rifiuto(nomeRifiuto: "Cuscini"),
