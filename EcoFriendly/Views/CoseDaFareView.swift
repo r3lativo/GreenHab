@@ -29,13 +29,13 @@ struct CoseDaFareView: View {
                     HStack {
                         Button(action: {
                             changeTask(task.id)
-//                            cambiare completata da true a false
                         }) {
                             Image(task.immagineCosa)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 50, height: 50)
                                 .saturation(task.cosaCompletata ? 1 : -10)
+                                .animation(.default)
                         }
                         .disabled(!challenge.sfidaInCorso)
                         Text(task.descrizioneCosa)

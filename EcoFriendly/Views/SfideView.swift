@@ -42,13 +42,19 @@ struct SfideView: View {
                                 }), let currentChallenge = userChallenges.sfida.firstIndex(where: {
                                     $0.id == challenge.id
                                 }) {
-                                    userChallenges.sfida[currentChallenge].componenti[id].cosaCompletata.toggle()
+                                    withAnimation {
+                                        userChallenges.sfida[currentChallenge].componenti[id].cosaCompletata.toggle()
+                                    }
+                                    
                                     
                                     if userChallenges.sfida[currentChallenge].componenti.filter({!$0.cosaCompletata}).isEmpty {
                                         userChallenges.sfida[currentChallenge].sfidaCompletata = true
                                         
-                                       let badges = userChallenges.sfida.filter{$0.sfidaCompletata}.reduce([String](), {$0 + [$1.iconaSfida]} )
-                                        UserDefaults.standard.set(badges, forKey: "badges")
+                                        var badges = UserDefaults.standard.array(forKey: "badges") as? [String] ?? []
+                                        if !badges.contains(challenge.iconaSfida) {
+                                            badges.append(challenge.iconaSfida)
+                                            UserDefaults.standard.set(badges, forKey: "badges")
+                                        }
 
                                     }
                                     
@@ -59,6 +65,14 @@ struct SfideView: View {
                                     $0.id == index
                                 }) {
                                     userChallenges.sfida[id].sfidaInCorso = false
+                                    userChallenges.sfida[id].sfidaCompletata = false
+                                    userChallenges.sfida[id].componenti.forEach { item in
+                                       if let index = userChallenges.sfida[id].componenti.firstIndex(where: {
+                                            $0.id == item.id
+                                       }) {
+                                           userChallenges.sfida[id].componenti[index].cosaCompletata = false
+                                       }
+                                    }
                                 }
                             } )) {
                                 ZStack {
@@ -114,14 +128,19 @@ struct SfideView: View {
                             }), let currentChallenge = userChallenges.sfida.firstIndex(where: {
                                 $0.id == challenge.id
                             }) {
-                                userChallenges.sfida[currentChallenge].componenti[id].cosaCompletata.toggle()
+                                withAnimation {
+                                    userChallenges.sfida[currentChallenge].componenti[id].cosaCompletata.toggle()
+                                }
                                 
                                 if userChallenges.sfida[currentChallenge].componenti.filter({!$0.cosaCompletata}).isEmpty {
                                     userChallenges.sfida[currentChallenge].sfidaCompletata = true
                                     
-                                   let badges = userChallenges.sfida.filter{$0.sfidaCompletata}.reduce([String](), {$0 + [$1.iconaSfida]} )
-                                    UserDefaults.standard.set(badges, forKey: "badges")
-
+                                    var badges = UserDefaults.standard.array(forKey: "badges") as? [String] ?? []
+                                    if !badges.contains(challenge.iconaSfida) {
+                                        badges.append(challenge.iconaSfida)
+                                        UserDefaults.standard.set(badges, forKey: "badges")
+                                    }
+                                    
                                 }
                                 
                             }
@@ -131,6 +150,14 @@ struct SfideView: View {
                                 $0.id == index
                             }) {
                                 userChallenges.sfida[id].sfidaInCorso = false
+                                userChallenges.sfida[id].sfidaCompletata = false
+                                userChallenges.sfida[id].componenti.forEach { item in
+                                   if let index = userChallenges.sfida[id].componenti.firstIndex(where: {
+                                        $0.id == item.id
+                                   }) {
+                                       userChallenges.sfida[id].componenti[index].cosaCompletata = false
+                                   }
+                                }
                             }
                         } )) {
                             ZStack {

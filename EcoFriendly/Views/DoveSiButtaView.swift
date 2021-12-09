@@ -12,7 +12,8 @@ struct DoveSiButtaView: View {
     @State private var searchText = ""
     
     var body: some View {
-            List {
+        List {
+//            LazyVStack(pinnedViews: [.sectionHeaders]) {
                 ForEach(searchResults) { tipo in
                     Section(header: Text(tipo.nomeTipo) ) {
                         ForEach(tipo.rifiuti) { rifiuto in
@@ -23,9 +24,11 @@ struct DoveSiButtaView: View {
                 
             }
             .searchable(text: $searchText)
+            .listStyle(PlainListStyle())
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Dove lo butto?")
-        }
+//        }
+    }
     
     
     var searchResults: [ClasseRifiuti] {

@@ -99,7 +99,7 @@ struct PageView: View {
                 .padding(.bottom, 30.0)
                 
                 Button(action: {
-                    UserDefaults.standard.set(nomeUtente, forKey: "Nome Utente")
+                    UserDefaults.standard.set(nomeUtente, forKey: "nomeUtente")
                     shouldShowOnboarding.toggle()
                 }, label: {
                     Text("Inizia")

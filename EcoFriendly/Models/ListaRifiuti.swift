@@ -139,7 +139,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                             Rifiuto(nomeRifiuto: "Zoccoli")
                            ]),
     
-    ClasseRifiuti(nomeTipo: "Isola Ecologica 🏝\no Raccoglitori preposti ♻️",
+    ClasseRifiuti(nomeTipo: "Isola Ecologica 🏝 o Raccoglitori preposti ♻️",
                   classeIco: "isolaIco",
                   rifiuti: [Rifiuto(nomeRifiuto: "Abiti Usati"),
                             Rifiuto(nomeRifiuto: "Acquaragia (contenitore pieno o con tracce)"),

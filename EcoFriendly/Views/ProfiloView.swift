@@ -11,9 +11,9 @@ import SwiftUI
 struct ProfiloView: View {
     
     @State private var showModal: Bool = false
-    @State var nomeUtente = UserDefaults.standard.string(forKey: "nomeUtente") ?? ""
+    @AppStorage("nomeUtente") var nomeUtente = ""
     @State var immagineUtente = "polarBear"
-    let badges: [String] = UserDefaults.standard.object(forKey: "badges") as? [String] ?? []
+    @State var badges: [String] = UserDefaults.standard.object(forKey: "badges") as? [String] ?? []
     
     var body: some View {
         NavigationView {
@@ -25,7 +25,7 @@ struct ProfiloView: View {
                     .frame(width: 280, height: 280)
                     .padding([.top, .leading, .trailing])
                 
-                Text(UserDefaults.standard.string(forKey: "nomeUtente") ?? "")
+                Text(nomeUtente)
                     .font(.title)
                     .fontWeight(.regular)
                     .padding(.bottom)
@@ -67,6 +67,8 @@ struct ProfiloView: View {
             }
             .onAppear {
                 nomeUtente = UserDefaults.standard.string(forKey: "nomeUtente") ?? ""
+                badges =  UserDefaults.standard.object(forKey: "badges") as? [String] ?? []
+                print(badges.count)
             }
         }
     }
