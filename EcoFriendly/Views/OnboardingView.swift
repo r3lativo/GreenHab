@@ -5,8 +5,12 @@
 //  Created by Giovanni Duca on 01/12/21.
 //
 
+import UserNotifications
 import Foundation
 import SwiftUI
+
+
+
 
 //  Onboarding
 
@@ -20,7 +24,7 @@ struct OnboardingView: View {
                 PageView(
                     title: "Benvenuto in\n GreenHab",
                     imageName: "planet",
-                    description: "l’applicazione che ti aiuterà ad essere più eco-friendly 🌱",
+                    description: "L’applicazione che ti aiuterà ad essere più eco-friendly 🌱",
                     showStart: false,
                     promptUsername: false,
                     shouldShowOnboarding: $shouldShowOnboarding
@@ -108,6 +112,15 @@ struct PageView: View {
                 Button(action: {
                     UserDefaults.standard.set(nomeUtente, forKey: "nomeUtente")
                     shouldShowOnboarding.toggle()
+                    
+                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                        if success {
+                            print("Perfetto!")
+                        } else if let error = error {
+                            print(error.localizedDescription)
+                        }
+                    }
+
                 }, label: {
                     Text("Inizia")
                         .font(.system(size: 20))

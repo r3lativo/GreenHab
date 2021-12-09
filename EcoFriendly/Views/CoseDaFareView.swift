@@ -5,7 +5,29 @@
 //  Created by Giovanni Duca on 03/12/21.
 //
 
+import UserNotifications
 import SwiftUI
+
+func scheduleNotification() {
+    let center = UNUserNotificationCenter.current()
+
+    let content = UNMutableNotificationContent()
+    content.title = "GreenHab"
+    content.body = "Hey eco-friend! Non dimenticare le tue sfide in corso \n^_^"
+    content.categoryIdentifier = "alarm"
+    content.userInfo = ["customData": "fizzbuzz"]
+    content.sound = UNNotificationSound.default
+
+    var dateComponents = DateComponents()
+    dateComponents.hour = 10
+    dateComponents.minute = 30
+    let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+
+    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+    center.add(request)
+}
+
+
 
 struct CoseDaFareView: View {
     
@@ -48,7 +70,8 @@ struct CoseDaFareView: View {
                 Button(action: {
                     changeStatus(challenge.id)
                     presentationMode.wrappedValue.dismiss()
-                    
+                    scheduleNotification()
+
 //                    vorrei restare sulla stessa schermata
 //                    ma invece mi fa tornare indietro
                 }) {

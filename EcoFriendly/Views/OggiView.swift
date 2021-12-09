@@ -12,7 +12,7 @@ struct OggiView: View {
         NavigationView {
             VStack {
                 
-                Text("Oggi si butta la plastica!")
+                Text("Si butta la plastica!")
                     .font(.title)
                     .multilineTextAlignment(.center)
                     .padding()
@@ -61,7 +61,7 @@ struct OggiView: View {
                     }
                 }
                 .disabled(true)
-                .padding(.bottom, 80.0)
+                .padding(.bottom, 40.0)
                 
             }
             .navigationTitle("Oggi")

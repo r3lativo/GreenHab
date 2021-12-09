@@ -5,6 +5,7 @@
 //  Created by Giovanni Duca on 30/11/21.
 //
 
+import UserNotifications
 import SwiftUI
 
 //  Main TabView with buttons to move through the app
@@ -17,12 +18,7 @@ extension Color {
 
 struct MainMainView: View {
     
-    //  RIATTIVARE LA STRINGA @AppStorage
-    //  E DISATTIVARE LA @State PER FAR APPARIRE L'ONBOARDING
-    
-    //    @State var shouldShowOnboarding: Bool = true
-    
-    //    CERCARE USERDEFAULT
+
     
 @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
@@ -48,10 +44,11 @@ struct MainMainView: View {
         .accentColor(Color.teal)
         .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
             OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
+            
+            
         })
     }
 }
-
 
 
 struct MainMain_Previews: PreviewProvider {
