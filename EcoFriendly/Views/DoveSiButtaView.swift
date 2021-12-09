@@ -24,7 +24,7 @@ struct DoveSiButtaView: View {
             }
             .searchable(text: $searchText)
             .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Dove si butta?")
+            .navigationTitle("Dove lo butto?")
         }
     
     

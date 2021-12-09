@@ -42,24 +42,8 @@ struct ProfiloView: View {
                             Image("badge_\(badge)")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(height: 170)
+                                .frame(height: 150)
                         }
-                        
-                        
-//                        Image("christmas")
-//                            .resizable()
-//                            .scaledToFit()
-//                            .frame(height: 170)
-//
-//                        Image("shopping")
-//                            .resizable()
-//                            .scaledToFit()
-//                            .frame(height: 170)
-//
-//                        Image("night")
-//                            .resizable()
-//                            .scaledToFit()
-//                            .frame(height: 170)
                         
                     }
                     .padding([.bottom, .trailing, .leading])

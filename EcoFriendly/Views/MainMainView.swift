@@ -12,6 +12,7 @@ import SwiftUI
 extension Color {
     static let coloreVerde = Color("coloreVerde")
     static let coloreCeleste = Color("coloreCeleste")
+    static let grigioChiaro = Color("grigioChiaro")
 }
 
 struct MainMainView: View {

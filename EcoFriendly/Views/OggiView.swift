@@ -16,44 +16,52 @@ struct OggiView: View {
                     .font(.title)
                     .multilineTextAlignment(.center)
                     .padding()
-                
+                                
                 Image("bidonePlastica")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 300)
+                
+                Text("📍Borgo Orefici")
+                    .font(.system(size: 18))
+                    .padding()
                 
                 Spacer()
                 
                 
                 NavigationLink(destination: DoveSiButtaView())
                 {
-                    Text("Dove si butta?")
-                        .frame(width: 380, height: 50)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 6)
-                                .stroke(Color.secondary, lineWidth: 1)
-                                .shadow(radius: 5)
-                        )
-                        .foregroundColor(.primary)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 6)
+                            .frame(width: 360, height: 80)
+                            .shadow(radius: 5)
+                            .padding([.leading, .trailing])
+                            .foregroundColor(.coloreVerde)
+                        
+                        Text("Dove lo butto?")
+                            .foregroundColor(Color.primary)
+                            .font(.system(size: 22))
+                    }
                 }
-                .background(Color.coloreVerde)
+                .padding(.bottom, 15.0)
 
                 
                 NavigationLink(destination: RifiutiSpecialiView())
                 {
-                    Text("Rifiuti Speciali")
-                        .frame(width: 380, height: 50)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 6)
-                                .stroke(Color.secondary, lineWidth: 1)
-                                .shadow(radius: 3)
-                            )
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 6)
+                            .frame(width: 360, height: 80)
+                            .shadow(radius: 5)
+                            .padding([.leading, .trailing])
+                            .foregroundColor(.grigioChiaro)
+                        
+                        Text("Rifiuti Speciali")
+                            .foregroundColor(Color.secondary)
+                            .font(.system(size: 22))
+                    }
                 }
-                .background(Color.coloreVerde)
                 .disabled(true)
-                .padding(.bottom, 50.0)
-                
-                
+                .padding(.bottom, 80.0)
                 
             }
             .navigationTitle("Oggi")

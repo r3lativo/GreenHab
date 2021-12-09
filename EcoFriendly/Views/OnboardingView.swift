@@ -22,7 +22,6 @@ struct OnboardingView: View {
                     imageName: "planet",
                     description: "l’applicazione che ti aiuterà ad essere più eco-friendly 🌱",
                     showStart: false,
-                    showPromptUsername: false,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
                 
@@ -31,7 +30,6 @@ struct OnboardingView: View {
                     imageName: "mountain",
                     description: "Sperimenta nuove abitudini ecosostenibili grazie alle sfide",
                     showStart: false,
-                    showPromptUsername: false,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
                 
@@ -40,7 +38,6 @@ struct OnboardingView: View {
                     imageName: "recycle.bin",
                     description: "Non sai dove e quando buttare i tuoi rifiuti? Scoprilo nella sezione Oggi",
                     showStart: false,
-                    showPromptUsername: false,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
                 
@@ -49,7 +46,6 @@ struct OnboardingView: View {
                     imageName: "polarBear",
                     description: "",
                     showStart: true,
-                    showPromptUsername: true,
                     shouldShowOnboarding: $shouldShowOnboarding
                 )
                 
@@ -64,7 +60,6 @@ struct PageView: View {
     let imageName: String
     let description: String
     let showStart: Bool
-    let showPromptUsername: Bool
     
     @Binding var shouldShowOnboarding: Bool
     @State var nomeUtente: String = ""
@@ -82,7 +77,13 @@ struct PageView: View {
                 .frame(width: 350, height: 350)
                 .padding()
             
-            if showPromptUsername {
+            Text (description)
+                .multilineTextAlignment(.center)
+                .font(.system(size:26))
+                .foregroundColor(Color(.secondaryLabel))
+                .padding()
+            
+            if showStart {
                 HStack {
                     Text("Username")
                         .padding()
@@ -94,16 +95,9 @@ struct PageView: View {
                     RoundedRectangle(cornerRadius: 6)
                         .stroke(Color.primary, lineWidth: 2)
                     )
-            }
-            
-            
-            Text (description)
-                .multilineTextAlignment(.center)
-                .font(.system(size:26))
-                .foregroundColor(Color(.secondaryLabel))
-                .padding()
-            
-            if showStart {
+                
+                .padding(.bottom, 30.0)
+                
                 Button(action: {
                     UserDefaults.standard.set(nomeUtente, forKey: "Nome Utente")
                     shouldShowOnboarding.toggle()
