@@ -30,7 +30,7 @@ struct ProfiloView: View {
                     .fontWeight(.regular)
                     .padding(.bottom)
                 
-                Text("Progressi")
+                Text("Medaglie")
                     .font(.title)
                     .fontWeight(.light)
                     .padding(.trailing, 270.0)
