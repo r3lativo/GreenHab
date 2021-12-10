@@ -123,6 +123,7 @@ let tipoRifiuti: [ClasseRifiuti]  = [
                             Rifiuto(nomeRifiuto: "Sacchetto dell'aspirapolvere"),
                             Rifiuto(nomeRifiuto: "Sacchetto di carta con interno plastificato (non tetrapak"),
                             Rifiuto(nomeRifiuto: "Sapone in pezzi e saponette"),
+                            Rifiuto(nomeRifiuto: "Scontrino"),
                             Rifiuto(nomeRifiuto: "Siringhe ben chiuse (piccole quantità)"),
                             Rifiuto(nomeRifiuto: "Spazzole"),
                             Rifiuto(nomeRifiuto: "Spazzolini"),

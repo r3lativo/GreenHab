@@ -163,7 +163,7 @@ struct SfideView: View {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 20)
                                     .foregroundColor(Color.coloreVerde)
-                                    .shadow(radius: 5)
+                                    .shadow(radius: 2)
                                 
                                 HStack {
                                     VStack {

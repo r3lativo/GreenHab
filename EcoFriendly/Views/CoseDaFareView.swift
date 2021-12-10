@@ -13,7 +13,7 @@ func scheduleNotification() {
 
     let content = UNMutableNotificationContent()
     content.title = "GreenHab"
-    content.body = "Hey eco-friend! Non dimenticare le tue sfide in corso \n^_^"
+    content.body = "Hey eco-friend! Non dimenticare le tue sfide in corso 😁"
     content.categoryIdentifier = "alarm"
     content.userInfo = ["customData": "fizzbuzz"]
     content.sound = UNNotificationSound.default
@@ -75,7 +75,7 @@ struct CoseDaFareView: View {
 //                    vorrei restare sulla stessa schermata
 //                    ma invece mi fa tornare indietro
                 }) {
-                    Text("Accetta la sfida!")
+                    Text("Accetta la sfida")
                         .font(.system(size: 20))
                         .foregroundColor(.black)
                         .frame(width: 380, height: 50)
@@ -106,7 +106,7 @@ struct CoseDaFareView: View {
                 .alert(isPresented: $showAlert) {
                     Alert(
                         title: Text("Hai ottenuto un badge!"),
-                        message: Text("Puoi vederlo nella sezione profilo!")
+                        message: Text("Puoi vederlo nella sezione profilo")
                     )
                 }
                
